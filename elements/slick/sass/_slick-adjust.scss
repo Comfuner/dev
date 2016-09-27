@@ -1,0 +1,42 @@
+.slick {
+  direction: ltr;
+  //@media screen and (max-width:600px) {
+  //width:75%;
+  margin-left:40px;
+  margin-right:40px;
+  //}
+}
+
+.inter_caro_item {
+  //padding-right:24px;
+  a {
+    text-decoration:none;
+    display:block;
+  }
+  img {
+    width:100%;
+    height: auto;
+  }
+}
+.inter_caro_desc {
+  padding-top: 6px;
+  font-size:16px;
+  line-height:18px;
+  font-family: "open sans hebrew";
+  direction:rtl;
+  text-align:right;
+  color: #222;
+}
+
+.slick-dots {
+  bottom: 0px;
+  margin-left: 0; /* Fixes the visible horizontal scroll bar */
+}
+.slick-slide {
+  margin: 0 12px;
+}
+/* the parent */
+.slick-list {
+  direction: ltr;
+  margin: 0 -12px;
+}

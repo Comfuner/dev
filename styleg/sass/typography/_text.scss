@@ -1,0 +1,51 @@
+
+@function calcFontSize($font-value,$font-base) {
+     @return $font-value / $font-base;
+}
+
+@mixin calcLineHeight($font-value, $scale: 2) {
+  // rhythm unit
+  $rhythm: $line-height-base * $font-value / $scale;
+  //
+  // number of rhythm units that can fit the font-value
+  $lines: ceil(($font-value + 0.001) / $rhythm);
+
+  // calculate the new line-height
+  $line-height: $rhythm * $lines / $font-value;
+
+  // use the results
+  //font-size: $font-size;
+  line-height: $line-height;
+
+  $baseline-distance: ($line-height - $cap-height) / 2;
+
+   //position: relative;
+   //top: $baseline-distance + em;
+}
+
+$font-sizes: (
+        xxs: $font-base - 6,
+        xs: $font-base - 4,
+        s: $font-base - 2,
+        r: $font-base,
+        m: $font-base + 2,
+        l: $font-base + 8,
+        xl: $font-base + 16,
+        xxl: $font-base + 32,
+        xxxl: $font-base + 56,
+        xxxxl: $font-base + 80,
+);
+
+@each $font-size, $font-value in $font-sizes {
+  .#{$ns}text-#{$font-size} {
+    font-size: #{$font-value}#{'px'};
+    font-size: #{calcFontSize($font-value,$font-base)}#{$default-size-unit};
+    @include calcLineHeight($font-value);
+  }
+  .#{$ns}icon.#{$ns}icon-heb-#{$font-size} {
+    font-size: #{$font-value}#{'px'};
+    font-size: #{calcFontSize($font-value,$font-base)}#{$default-size-unit};
+    @extend %inter-font_htzIcons;
+  }
+}
+

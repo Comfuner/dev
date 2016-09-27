@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+.#{$ns}vale {
+  position: absolute;
+  top: 0;
+  bottom: 0%;
+  left: 0;
+  right: 0%;
+  //background: repeating-linear-gradient(
+  //                -45deg,
+  //                rgba(255,255,255,1),
+  //                rgba(255,255,255,1) 2px,
+  //                rgba(255,255,255,0.85) 2px,
+  //                rgba(255,255,255,0.85) 4px);
+  background: #fff;
+  z-index: $z-index-top;
+  div, img {
+    text-align:center;
+    position: absolute;
+    z-index: 999;
+    overflow: visible;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 6rem;
+    width: 6rem;
+    svg {
+      height: 6rem;
+      width: 6rem;
+    }
+    &::after {
+      @extend %inter_font-opensans;
+      color: #222;
+      font-weight: 700;
+      font-size: 1rem;
+      content: $domainLoadText;
+      direction: $default-flow;
+      white-space: nowrap;
+      display:inline-block;
+    }
+  }
+}

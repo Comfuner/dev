@@ -1,0 +1,39 @@
+// grid styles
+$bases: (1,2,8,10,12);
+
+// create classes for all divisions by base
+@each $base in $bases {
+  @for $i from 1 through $base {
+    .col#{$i}of#{$base} {
+      width: #{$i/$base*100%};
+    }
+  }
+}
+
+// on grid container
+.gg {
+  width: 100%;
+  height: auto;
+  font-size: 0px;
+  padding: 0px;
+}
+
+[data-grid-active] {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+}
+
+// gutter
+$gutters: (loose:(15,7.5), normal:(10,5), dense:(5,2.5));
+
+@each $key, $value in $gutters {
+  .#{$key}V [data-grid-active] {
+    padding-bottom: #{nth($value, 1)}px;
+  }
+
+  .#{$key}H [data-grid-active] {
+    padding-left: #{nth($value, 2)}px;
+    padding-right: #{nth($value, 2)}px;
+  }
+}

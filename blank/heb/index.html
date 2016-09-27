@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <title></title>
+    <meta name="description" content="">
+    <link rel="canonical" href=""/>
+    <meta property="og:title" content=""/>
+    <meta property="og:type" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:image" content="">
+    <meta property="og:description" content=""/>
+
+
+    <!-- build:remove -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/styles_heb.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/project_styles.css">
+    <!-- /build -->
+
+    <!-- build:template
+    <link rel="stylesheet" type="text/css" href="<%= prodUrl %>stylesheets/<%= name %>-styles.min.css">
+     /build -->
+</head>
+<body>
+<!-- Facebook init -->
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({appId: 52929925921, status: true, xfbml: true});
+    };
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- End of Facebook init -->
+<div class="inter-bar w-check">
+    <div class="menu_button">
+        <button class="inter-menu_button cmn-toggle-switch cmn-toggle-switch__htx"><span>ניווט</span></button>
+    </div>
+    <ul class="menu_list">
+        <li><a class="scrollease off50" href="#chap0">ראשי</a></li>
+        <li><a class="scrollease off50" href="#chap1">פתיחה</a></li>
+        <li><a class="scrollease off50" href="#chap2">נדל"ן</a></li>
+        <li><a class="scrollease off50" href="#chap3">שכר</a></li>
+        <li><a class="scrollease off50" href="#chap4">משפחה וצריכה</a></li>
+        <li><a class="scrollease off50" href="#chap5">חינוך</a></li>
+        <li><a class="scrollease off50" href="#chap6">בריאות</a></li>
+        <li><a class="scrollease off50" href="#chap7">כלכלה</a></li>
+        <li><a class="scrollease off50" href="#chap8">תיירות ופנאי</a></li>
+    </ul>
+    <a href="http://www.thehaaretz.co.il" target="_blank"><span class="hid">הארץ</span>
+        <div class="inter-bar_logo"><img src="http://www.haaretz.co.il/st/c/static/resources/img/logos/htz-logo.svg">
+        </div>
+    </a>
+    <div class="inter-bar_shares" s-header="header" s-text="text" s-desc="desc"
+         s-img="http://lorempixel.com/1920/1080/abstract/1" s-link="http://www.haaretz.co.il">
+        <button class="inter-f" s-type="main">f</button>
+        <button class="inter-t" s-type="main">t</button>
+    </div>
+</div>
+<!-- Main Element Start -->
+<div class="inter-mc w-check">
+
+</div>
+<!-- Main Element End -->
+
+<script src="http://www.haaretz.co.il/st/c/static/resources/js/jquery/jquery-2.1.4.min.js"></script>
+<!--<script src="http://www.haaretz.co.il/st/c/static/resources/js/xl/xl.min.300415.js"></script>-->
+<script src="http://www.haaretz.co.il/st/c/static/cdn/interext-311215.min.js"></script>
+<!--<script src="http://www.haaretz.co.il/st/c/work/elijahu/engines/tests/bundle/2/mag_builder.js"></script>-->
+<script src="http://www.haaretz.co.il/st/c/work/elijahu/engines/tests/bundle/2/bundle.js"></script>
+<!--<script src="js/main-mag.js"></script>-->
+<script src="js/main.js"></script>
+
+!-- Analytics Tag Start -->
+<script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-589309-3']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+<!-- Analytics Tag End -->
+<!-- Chartbeat Tag Start -->
+<script>
+    var _sf_async_config={uid:5952,domain:"haaretz.co.il",useCanonical:true,sections:"interactive"};
+    (function(){
+        function loadChartbeat() {
+            window._sf_endpt=(new Date()).getTime();
+            var e = document.createElement('script');
+            e.setAttribute('language', 'javascript');
+            e.setAttribute('type', 'text/javascript');
+            e.setAttribute('src',(("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+                    "static.chartbeat.com/js/chartbeat.js");
+            document.body.appendChild(e);
+        }
+        var oldonload = window.onload;
+        window.onload = (typeof window.onload != 'function') ?
+                loadChartbeat : function() { oldonload(); loadChartbeat(); };
+    })();
+</script>
+<!-- Chartbeat Tag End -->
+</body>
+</html>

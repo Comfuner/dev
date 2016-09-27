@@ -1,0 +1,191 @@
+
+
+// placeholders
+%distinct {
+  background-color: $color-dark-gray;
+  color: #fff;
+}
+
+.fl {
+  position:relative;
+  z-index: $z-index-col;
+  //margin-bottom: $layout-col-gutter !important;
+  &:last-child {
+    margin-bottom:0 !important;
+  }
+}
+.fl-r {
+  @extend .fl;
+  float: right;
+  width: $layout-right-col-width - $layout-col-gutter;
+  clear: right;
+  margin-right: -$layout-right-col-width;
+  //margin-bottom: $layout-row-padding;
+  [mq='m'] & {
+    @if ($domain == 'eng') {
+      padding-left: 0;
+      padding-right: $layout-tablet-padding;
+    } @else {
+
+    }
+  }
+}
+.fl-l {
+  @extend .fl;
+  float: left;
+  width: $layout-left-col-width - $layout-col-gutter;
+  clear: left;
+  margin-left: -$layout-left-col-width;
+  //margin-bottom: $layout-row-padding;
+  [mq='m'] & {
+    @if ($domain == 'eng') {
+      padding-left: $layout-tablet-padding;
+      padding-right: 0;
+    } @else {
+
+  }
+  }
+}
+.fl-d {
+  clear: both;
+  float: unset;
+  float: none;
+  width: unset;
+  width: auto;
+  margin: 0;
+}
+.#{$ns}layout {
+  .row {
+      width:100%;
+      max-width: $layout-max-width;
+      margin:0 auto;
+      margin-bottom: $layout-col-gutter;
+      &:last-child {
+        margin-bottom:0;
+      }
+        &.stripped-tablet {
+          padding-right: $layout-tablet-padding !important;
+          padding-left: $layout-tablet-padding !important;;
+          .fl-l, .fl-r {
+            @extend .fl-d;
+          }
+        }
+        &.stripped-mobile {
+          padding-right: $layout-mobile-padding !important;;
+          padding-left: $layout-mobile-padding !important;;
+          .fl-l, .fl-r {
+            @extend .fl-d;
+          }
+        }
+        &.regular {
+          @include clearfix();
+          padding-right: $layout-right-col-width;
+          padding-left: $layout-left-col-width;
+          .fl-l {
+            [mq='m'] & {
+              @if ($domain == 'eng') {
+                    @extend .fl-r;
+              } @else {
+                  padding-left: $layout-tablet-padding;
+              }
+            }
+          }
+          .fl-r {
+            [mq='m'] & {
+              @if ($domain == 'eng') {
+                padding-right: $layout-tablet-padding !important;
+              } @else {
+                &:after {
+                  clear:both;
+                }
+              }
+            }
+          }
+
+          [mq='m'] & {
+            @if ($domain == 'eng') {@extend .centerright} @else {@extend .centerleft}
+          }
+          [mq='s'] & {
+            @extend .stripped-tablet;
+          }
+          [mq='t'] & {
+            @extend .stripped-mobile;
+          }
+        }
+        &.flush {
+          max-width:100%;
+
+        }
+        &.full {
+          padding:0;
+          [mq='m'] & {
+            @extend .stripped-tablet;
+          }
+          [mq='s'] & {
+            @extend .stripped-tablet;
+          }
+          [mq='t'] & {
+            @extend .stripped-mobile;
+          }
+        }
+        &.distinct {
+          @extend %distinct;
+          [mq='m'] & {
+            @extend .stripped-tablet;
+          }
+          [mq='s'] & {
+            @extend .stripped-tablet;
+          }
+          [mq='t'] & {
+            @extend .stripped-mobile;
+          }
+        }
+        &.centerleft {
+          padding-left: $layout-right-col-width;
+          padding-right: 0;
+          .fl-r {
+            @extend .fl-l;
+            [mq='m'] & {
+            padding-left: $layout-tablet-padding;
+            }
+          }
+          [mq='m'] & {
+            padding-right: $layout-tablet-padding;
+          }
+          [mq='s'] & {
+            @extend .stripped-tablet;
+          }
+          [mq='t'] & {
+            @extend .stripped-mobile;
+          }
+          & + & {
+            clear:both;
+          }
+        }
+        &.centerright {
+          padding-right: $layout-right-col-width;
+          padding-left: 0;
+          .fl-l {
+            @extend .fl-r;
+            [mq='m'] & {
+              padding-right: $layout-tablet-padding;
+            }
+          }
+          [mq='m'] & {
+            padding-left: $layout-tablet-padding;
+          }
+          [mq='s'] & {
+            @extend .stripped-tablet;
+          }
+          [mq='t'] & {
+            @extend .stripped-mobile;
+          }
+          & + & {
+            clear:both;
+          }
+        }
+    // todo: media queries
+
+  } // end row class
+}
+

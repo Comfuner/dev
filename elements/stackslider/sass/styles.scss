@@ -1,0 +1,29 @@
+@import "range";
+
+@import url(http://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+@font-face {
+  font-family: "htzIcons";
+  src: url("http://www.haaretz.co.il/st/c/prod/resources/fonts/icons/htzIcons.eot?#iefix") format("embedded-opentype"),
+  url("http://www.haaretz.co.il/st/c/prod/resources/fonts/icons/htzIcons.woff") format("woff"),
+  url("http://www.haaretz.co.il/st/c/prod/resources/fonts/icons/htzIcons.ttf") format("truetype"),
+  url("http://www.haaretz.co.il/st/c/prod/resources/fonts/icons/htzIcons.svg#htzIcons") format("svg")
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "htzIcons";
+    src: url("http://www.haaretz.co.il/st/c/prod/resources/fonts/icons/htzIcons.svg#htzIcons") format("svg")
+  }
+}
+
+body,html {
+  padding:0;margin:0;
+  height:100%;
+  font-family: "open sans hebrew";
+}
+* {
+  box-sizing: border-box;
+}
+.inter-img-w {
+  width:100%;
+  height:auto;
+}

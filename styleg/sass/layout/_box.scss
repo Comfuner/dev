@@ -1,0 +1,17 @@
+///*--------------------------------------------------------------*/
+//// Box Model
+///*--------------------------------------------------------------*/
+
+@include margins;
+@include paddings;
+
+//.inter_box {
+//    background: $main-color;
+//    @extend %inter_box_shadow;
+//    padding: 12px;
+//    margin: 6px;
+//}
+//
+//.inter_box2 {
+//    @extend  %inter_box_shadow;
+//}

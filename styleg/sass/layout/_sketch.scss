@@ -1,0 +1,18 @@
+@include media-t {
+}
+@include media-s {
+}
+@include media-m {
+}
+@include media-l {
+}
+@include media-x {
+}
+
+
+<div class="gg" data-grid="t" data-grid-gutter="looseV looseH">
+<div class="redSquareBox col1of2" data-grid-options="l-col1of2 s-col1of1"
+data-grid-active="l-col1of2"></div>
+<div class="blueSquareBox col1of2" data-grid-options="l-col1of2 s-col1of1"
+data-grid-active="l-col1of2"></div>
+</div>

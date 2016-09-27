@@ -1,0 +1,71 @@
+@mixin size($width, $height: $width) {
+  width: $width#{'px !important'};
+  height: $height#{'px !important'};
+}
+
+@mixin margins {
+  @each $space-name,$space-value in $spaces {
+    .m-#{$space-name} {margin:#{$space-value}#{'px !important'}};
+    .mt-#{$space-name} {margin-top:#{$space-value}#{'px !important'}};
+    .mr-#{$space-name} {margin-right:#{$space-value}#{'px !important'}};
+    .mb-#{$space-name} {margin-bottom:#{$space-value}#{'px !important'}};
+    .ml-#{$space-name} {margin-left:#{$space-value}#{'px !important'}};
+  }
+}
+@mixin paddings {
+  @each $space-name,$space-value in $spaces {
+    .p-#{$space-name} {padding:#{$space-value}#{'px !important'}};
+    .pt-#{$space-name} {padding-top:#{$space-value}#{'px !important'}};
+    .pr-#{$space-name} {padding-right:#{$space-value}#{'px !important'}};
+    .pb-#{$space-name} {padding-bottom:#{$space-value}#{'px !important'}};
+    .pl-#{$space-name} {padding-left:#{$space-value}#{'px !important'}};
+  }
+};
+
+//todo: rewrite/delete?
+//@mixin media-t {
+//    @media (max-width: map-get($bp,"media-t")) {
+//      @content
+//    }
+//}
+//@mixin media-s {
+//  @media (min-width: map-get($bp,"media-t")) and (max-width: map-get($bp,"media-s")) {
+//    @content
+//  }
+//}
+//@mixin media-m {
+//  @media (min-width: map-get($bp,"media-s")) and (max-width: map-get($bp,"media-m")) {
+//    @content
+//  }
+//}
+//@mixin media-l {
+//  @media (min-width: map-get($bp,"media-m")) and (max-width: map-get($bp,"media-l")) {
+//    @content
+//  }
+//}
+//@mixin media-x {
+//  @media (min-width: map-get($bp,"media-l")) {
+//    @content
+//  }
+//}
+//end todo
+@mixin prefix($map) {
+  $vendors: webkit moz ms o;
+  @each $prop, $value in $map {
+    @if $vendors {
+      @each $vendor in $vendors {
+        #{"-" + $vendor + "-" + $prop}: #{$value};
+      }
+    }
+    // Dump regular property anyway
+    #{$prop}: #{$value};
+  }
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

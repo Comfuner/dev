@@ -1,0 +1,237 @@
+@charset "UTF-8";
+/* line 8, ../sass/project_styles.scss */
+.t .full .mp .inter-caption {
+  padding: 0 15px !important;
+}
+/* line 11, ../sass/project_styles.scss */
+.s .full .mp .inter-caption {
+  padding: 0 15px !important;
+}
+/* line 14, ../sass/project_styles.scss */
+.m .full .mp .inter-caption {
+  padding: 0 15px !important;
+}
+
+/* line 20, ../sass/project_styles.scss */
+.t .op {
+  height: 500px !important;
+  background-size: cover;
+  background-image: url("http://www.haaretz.co.il/polopoly_fs/1.3062752.1473333344!/image/3092246289.jpg_gen/derivatives/size_468xAuto/3092246289.jpg") !important;
+}
+/* line 26, ../sass/project_styles.scss */
+.s .op {
+  background-image: url("http://www.haaretz.co.il/polopoly_fs/1.3062752.1473333344!/image/3092246289.jpg_gen/derivatives/size_468xAuto/3092246289.jpg") !important;
+}
+
+/* line 30, ../sass/project_styles.scss */
+#chap0 {
+  background: #15394f;
+  background: -moz-linear-gradient(top, #06141d 20%, black 100%);
+  background: -webkit-linear-gradient(top, #06141d 20%, black 100%);
+  background: linear-gradient(to bottom, #06141d 20%, black 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30c7ff', endColorstr='#000000',GradientType=0 );
+  color: #fff;
+  margin-bottom: 0 !important;
+}
+
+/* line 39, ../sass/project_styles.scss */
+h3.th.cntr {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* line 42, ../sass/project_styles.scss */
+.inter-caption {
+  color: #fff;
+}
+
+/* line 45, ../sass/project_styles.scss */
+.tm, .c a, .inter-share button, .open-inter-caption span {
+  color: #fff !important;
+}
+
+/* line 48, ../sass/project_styles.scss */
+p.tl {
+  color: #fff !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+/* line 51, ../sass/project_styles.scss */
+.t p.tl {
+  color: #09a5d9 !important;
+}
+/* line 54, ../sass/project_styles.scss */
+.s p.tl {
+  color: #09a5d9 !important;
+}
+
+/* line 58, ../sass/project_styles.scss */
+.inter-row {
+  color: #fff;
+}
+/* line 60, ../sass/project_styles.scss */
+.inter-row:last-child {
+  margin-bottom: 0 !important;
+  padding-bottom: 24px !important;
+}
+
+/* line 80, ../sass/project_styles.scss */
+.opCont {
+  background: none !important;
+}
+
+/* line 83, ../sass/project_styles.scss */
+.opAbsCont {
+  background: -moz-linear-gradient(top, transparent 0%, #06141d 90%);
+  background: -webkit-linear-gradient(top, transparent 0%, #06141d 90%);
+  background: linear-gradient(to bottom, transparent 0%, #06141d 90%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#30c7ff',GradientType=0 );
+}
+/* line 88, ../sass/project_styles.scss */
+.t .opAbsCont {
+  background: none !important;
+}
+/* line 89, ../sass/project_styles.scss */
+.s .opAbsCont {
+  background: none !important;
+}
+/* line 90, ../sass/project_styles.scss */
+.m .opAbsCont {
+  background: none !important;
+}
+
+/* line 94, ../sass/project_styles.scss */
+.inter_vale {
+  position: fixed;
+  top: 0;
+  bottom: 0%;
+  left: 0;
+  right: 0%;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 9999999;
+}
+/* line 110, ../sass/project_styles.scss */
+.inter_vale div, .inter_vale img {
+  text-align: center;
+  position: absolute;
+  z-index: 99;
+  overflow: visible;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 6rem;
+  width: 6rem;
+}
+/* line 122, ../sass/project_styles.scss */
+.inter_vale div svg, .inter_vale img svg {
+  height: 6rem;
+  width: 6rem;
+}
+/* line 126, ../sass/project_styles.scss */
+.inter_vale div::after, .inter_vale img::after {
+  font-family: "open sans hebrew";
+  color: #222;
+  font-weight: 700;
+  font-size: 1rem;
+  content: "טוען נתונים..";
+  direction: rtl;
+  display: inline-block;
+  white-space: normal;
+}
+
+/* line 139, ../sass/project_styles.scss */
+.alef {
+  fill: #fff;
+}
+
+/* line 143, ../sass/project_styles.scss */
+.alef-bg {
+  fill: #09a5d9;
+}
+
+/* line 147, ../sass/project_styles.scss */
+.commet-wrapper {
+  -ms-transform: translate(76px, 76px) scale(-1, 0.57) skewY(50deg);
+  -webkit-transform: translate(76px, 76px) scale(-1, 0.57) skewY(50deg);
+  transform: translate(76px, 76px) scale(-1, 0.57) skewY(50deg);
+}
+
+/* line 153, ../sass/project_styles.scss */
+.commet {
+  fill: #055b77;
+  -webkit-animation: color-change 2s linear infinite .8s, spin 1s linear infinite;
+  animation: color-change 2s linear infinite .8s, spin 1s linear infinite;
+}
+
+@-webkit-keyframes color-change {
+  0%, 100% {
+    fill: #055b77;
+  }
+  50% {
+    fill: #50cef8;
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes color-change {
+  0%, 100% {
+    fill: #055b77;
+  }
+  50% {
+    fill: #50cef8;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* line 197, ../sass/project_styles.scss */
+.youtubeplayButton {
+  width: 68px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+  transition: all 0.25s ease-in-out;
+}
+/* line 208, ../sass/project_styles.scss */
+.youtubeplayButton:hover {
+  -webkit-filter: grayscale(0%);
+  transform: translate(-50%, -50%);
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* line 216, ../sass/project_styles.scss */
+.youtubeLogo {
+  position: absolute;
+  width: 88px;
+  right: 0;
+  bottom: 0;
+  margin: 12px;
+  opacity: 0.8;
+}
+
+/* line 225, ../sass/project_styles.scss */
+.fakeyoutubebg {
+  background-position: center center;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=project_styles.css.map */

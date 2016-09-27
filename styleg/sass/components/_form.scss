@@ -1,0 +1,114 @@
+%formbase {
+  color: $main-color;
+  box-sizing: border-box;
+  width:100%;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #b2b2b2;
+  padding-left: 0.375rem;
+  padding-right: 0.375rem;
+  border-radius: 4px;
+  transition:all 0.25s ease-in-out;
+}
+
+%formnote {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #b2b2b2;
+  display: block;
+}
+
+.#{$ns}form-field {
+      .#{$ns}form-note {
+      @extend %formnote;
+    }
+    label {
+      color:$main-color;
+    }
+    input, select {
+      &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder {
+        color: $main-color;
+        font-weight:700;
+      }
+      &:focus {
+        border-color: $main-color;
+        border-width:2px;
+        color: $main-color;
+      }
+      @extend %formbase;
+
+        .#{$ns}form-note {
+          @extend %formnote;
+          color: #e92134;
+        }
+
+    }
+    &.is-error {
+      input {
+        &::-webkit-input-placeholder {
+          color: $color-red;
+        }
+        color: $color-red !important;
+        border-color: $color-red !important;
+        border-size: 4px;
+      }
+      .#{$ns}form-note {
+       color:$color-red;
+       font-weight:700;
+      }
+    }
+
+  }
+  %anybutton {
+    background-color: $main-color;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    //font-weight: 700;
+    letter-spacing: 0.03em;
+    outline: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: middle;
+    //white-space: nowrap;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.2857142857;
+    padding: 6px 12px;
+    padding: 0.375rem 0.75rem;
+    &:hover {
+      background-color: lighten($main-color,10%) !important;
+    }
+  }
+.inter-button {
+  @extend %anybutton;
+
+  &--s {
+    @extend %anybutton;
+    padding: 3px 6px;
+    padding: 0.1875rem 0.375rem;
+  }
+  &--l {
+    @extend %anybutton;
+    font-size:20px;
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+  &--xl {
+    @extend %anybutton;
+    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 1.2;
+  }
+  &--inline {
+    @extend %anybutton;
+    padding: 0 6px;
+    padding: 0 0.375rem;
+    vertical-align: baseline;
+    font-size: inherit;
+    line-height: inherit;
+  }
+}

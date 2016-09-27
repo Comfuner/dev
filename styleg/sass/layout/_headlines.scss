@@ -1,0 +1,18 @@
+.inter_head-top-line {
+  padding-top:0.375#{$default-size-unit};
+  border-top:6px solid $main-color;
+  display:inline-block;
+  * {
+    margin-bottom:$layout-col-gutter;
+    padding-#{$opposite-dir}:3#{$default-size-unit};
+  }
+}
+
+.inter_head-bottom-line {
+  padding-bottom:0.25#{$default-size-unit};
+  border-bottom:2px solid $main-color;
+  display:inline-block;
+
+  margin-bottom:$layout-col-gutter;
+  padding-#{$opposite-dir}:3#{$default-size-unit};
+}

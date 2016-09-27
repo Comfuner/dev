@@ -1,0 +1,105 @@
+// -------------------------------------
+//   $COLORS
+// -------------------------------------
+
+$color-neutral:        rgb(34,34,34);          // #222
+
+// Haaretz.co.il //
+$color-haaretz-dark: rgb(6, 113, 148);
+$color-haaretz-blue: rgb(9, 165, 217);
+$color-haaretz-top-bar: rgb(74, 190, 228);
+$color-haaretz-hover: rgb(121, 201, 228);
+$color-haaretz-bg: rgb(214, 235, 242);
+
+// TheMarker.com //
+$color-marker-dark: rgb(8, 84, 62);
+$color-marker-brand: rgb(96, 199, 0);
+$color-marker-brand-light: rgb(178, 229, 129);
+
+// Haaretz.com //
+$color-eng-primary:        rgb(74,115,133);      // #4e7385
+$color-eng-secondary:      rgb(159,22,38);         // #9F1626
+$color-eng-tertiary:       rgb(4,99,128);          // #046380
+$color-eng-quaternary:     rgb(156,150,124);       // #9c967c\
+
+$color-english-red: rgb(218, 80, 7);
+$color-english-cream-dark: rgb(215, 213, 190);
+$color-english-cream-light: rgb(229, 227, 212);
+$color-english-gray: rgb(239,239,239);
+
+// Sales
+$color-sales: rgb(250, 100, 0);
+
+// UI
+$color-red:             rgb(233, 33, 52);
+$color-green:           rgb(74, 153, 62);
+
+// Social
+$color-facebook: rgb(58, 87, 149);
+$color-twitter: rgb(21, 193, 225);
+$color-gplus: rgb(194, 10, 8);
+
+// GrayScale
+$color-text:      rgb(34, 34, 34);
+$color-darkest-gray:    rgb(34, 34, 34);
+$color-darker-gray:     rgb(44, 44, 44);
+$color-dark-gray:       rgb(53, 53, 53);
+$color-gray:            rgb(90, 90, 90);
+$color-light-gray:      rgb(178, 178, 178);
+$color-lighter-gray:    rgb(204, 204, 204);
+$color-very-light-gray: rgb(243, 243, 243);
+$color-lightest-gray:   rgb(245, 245, 240);
+$color-white:           #fff;
+
+
+$colors: (
+'color-neutral':        rgb(34,34,34),
+// Haaretz.co.il //
+'color-haaretz-dark': rgb(6, 113, 148),
+'color-haaretz-blue': rgb(9, 165, 217),
+'color-haaretz-top-bar': rgb(74, 190, 228),
+'color-haaretz-hover': rgb(121, 201, 228),
+'color-haaretz-bg': rgb(214, 235, 242),
+// TheMarker.com //
+'color-marker-dark': rgb(8, 84, 62),
+'color-marker-brand': rgb(96, 199, 0),
+'color-marker-brand-light': rgb(178, 229, 129),
+// Haaretz.com //
+'color-eng-primary':        rgb(74,115,133),      // #4e7385
+'color-eng-secondary':      rgb(159,22,38),         // #9F1626
+'color-eng-tertiary':       rgb(4,99,128),          // #046380
+'color-eng-quaternary':     rgb(156,150,124),       // #9c967c\
+'color-eng-red': rgb(218, 80, 7),
+'color-eng-cream-dark': rgb(215, 213, 190),
+'color-eng-cream-light': rgb(229, 227, 212),
+'color-eng-gray': rgb(239,239,239),
+// Sales
+'color-sales': rgb(250, 100, 0),
+// UI
+'color-red':             rgb(233, 33, 52),
+'color-green':           rgb(74, 153, 62),
+// Social
+'color-facebook': rgb(58, 87, 149),
+'color-twitter': rgb(21, 193, 225),
+'color-gplus': rgb(194, 10, 8),
+// GrayScale
+'color-text':      rgb(34, 34, 34),
+'color-darkest-gray':    rgb(34, 34, 34),
+'color-darker-gray':     rgb(44, 44, 44),
+'color-dark-gray':       rgb(53, 53, 53),
+'color-gray':            rgb(90, 90, 90),
+'color-light-gray':      rgb(178, 178, 178),
+'color-lighter-gray':    rgb(204, 204, 204),
+'color-very-light-gray': rgb(243, 243, 243),
+'color-lightest-gray':   rgb(245, 245, 240),
+'color-white':           #fff
+);
+
+@mixin displayColor {
+  @each $name,$value in $colors {
+    .#{$name} {
+      background-color: #{$value} !important;
+    }
+  }
+}
+@include displayColor;

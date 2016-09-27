@@ -1,0 +1,29 @@
+%#{$ns}box_shadow {
+  box-shadow: 0 0 4px 1px #ccc;
+}
+
+%#{$ns}gradient-open {
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 97%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 97%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 97%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+%cancel-text-on-video {
+  padding:24px 0;
+  background: unset;
+  background: 0;
+  color: #222;
+  @include prefix((transform:unset));
+  @include prefix((transform:none));
+  position:relative;
+  right: 0 !important;
+  left: 0 !important;
+}
+
+%cancel-text-on-image {
+  padding:24px 0;
+  color: #222;
+  background: unset;
+  background: 0;
+  position:relative;
+}

@@ -1,0 +1,93 @@
+.#{$ns}layout {
+  .row {
+    &.open {
+      position:relative;
+      &--textbox {
+        margin:0;
+        position:absolute;
+        bottom:0;
+        display:inline-block;
+        width:100%;
+        #{$opposite-dir}: 50%;
+        @include prefix((transform:translateX(#{$translate-sign}50%)));
+        max-width: 100%;
+        padding: 200px 0 50px 0;
+        @extend %#{$ns}gradient-open;
+        color: $open-text-color;
+        z-index: $z-index-video-html5 + 1;
+        a {
+          color:inherit;
+          text-decoration:none;
+        }
+      }
+      &--image {
+        margin-bottom:0;
+        //background-size:cover;
+        background-attachment: fixed;
+        background-position: center center;
+        background-position-x: 50%;
+        background-position-y: 50%;
+        height:100vh;
+        max-width:100%;
+        [mq="t"] & {
+          background-attachment: scroll;
+          height:50vh;
+        }
+        [mq="s"] & {
+
+        }
+        & + .open--textbox {
+          [mq="t"] & {
+            @extend %cancel-text-on-image
+
+          };
+          [mq="s"] & {
+            @extend %cancel-text-on-image
+          }
+        }
+      }
+      &--video-html5 {
+        margin-bottom:0;
+        position:relative;
+        max-width:100%;
+        width:100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        //overflow:hidden;
+        video {
+          position: relative;
+          width: 100%;
+          z-index: $z-index-video-html5;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .open--textbox {
+          [mq="t"] & {
+            @extend %cancel-text-on-video
+          };
+          [mq="s"] & {
+            @extend %cancel-text-on-video
+          }
+        }
+      }
+      &--video-youtube {
+        margin-bottom:0;
+        position:relative;
+        max-width:100%;
+        width:100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        //overflow:hidden;
+        .open--textbox {
+          [mq="t"] & {
+            @extend %cancel-text-on-image
+          };
+          [mq="s"] & {
+            @extend %cancel-text-on-image
+          }
+        }
+      }
+    }
+  }
+}
+

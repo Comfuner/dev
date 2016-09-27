@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100px;width:320px;">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <title>Title</title>
+    <style>
+        html,body {
+            margin:0;
+            padding:0;
+            overflow:hidden;
+
+        }
+        .htz-fbia-smartbanner {
+            font-family:Arial;
+            /*height:150px;*/
+            background: #f2f2f2;
+            padding:6px;
+            position:relative;
+            overflow:hidden;
+        }
+        .htz-fbia-smartbanner > #app-img {
+            height:100%;
+            border-radius:12px;
+            /*display:inline-block;*/
+            float:left;
+        }
+        .htz-fbia-smartbanner > #app-img > img {
+            height:100%;
+            width:auto;
+            border-radius:12px;
+            -webkit-box-shadow: inset -2px 2px 2px 0px rgba(0,0,0,0.34);
+            -moz-box-shadow: inset -2px 2px 2px 0px rgba(0,0,0,0.34);
+            box-shadow: inset -2px 2px 2px 0px rgba(0,0,0,0.34);
+        }
+        .htz-fbia-smartbanner > .htz-fbia-smartbanner-info {
+            float:left;
+            padding-left:12px;
+        }
+        .htz-fbia-smartbanner > .htz-fbia-smartbanner-info > #name {
+            font-size:12px;
+            font-weight:700;
+        }
+        .htz-fbia-smartbanner > .htz-fbia-smartbanner-info > #developer
+        {
+            font-size:8px;
+        }
+        .htz-fbia-smartbanner > .htz-fbia-smartbanner-info > #message {
+            font-size:10px;
+        }
+
+        .htz-fbia-smartbanner > .htz-fbia-smartbanner-info > #stars {
+            color: #ff7000;
+            font-size:8px;
+            -webkit-text-shadow: 0px 1px 0px rgba(0,0,0,0.25);
+            -moz-text-shadow: 0px 1px 0px rgba(0,0,0,0.25);
+            text-shadow: 0px 1px 0px rgba(0,0,0,0.25);
+        }
+        .htz-fbia-smartbanner > .htz-fbia-smartbanner-action {
+            float:right;
+        }
+        .htz-fbia-smartbanner > .htz-fbia-smartbanner-action > a {
+            text-decoration: none;
+            color: #0042ff;
+            display: block;
+            box-sizing: border-box;
+            position: absolute;
+            right: 0;
+            top: 0;
+            line-height: 50px;
+            padding: 6px 24px;
+        }
+    </style>
+</head>
+<body>
+<div class="htz-fbia-smartbanner">
+    <!--<div id="app-img">-->
+    <!--<img src="img/English-512.jpg">-->
+    <!--</div>-->
+    <div class="htz-fbia-smartbanner-info">
+         <div id="name">Haaretz</div>
+         <div id="developer">Haaretz Digital</div>
+         <div id="stars"><span>★★★★★</span></div>
+         <div id="message">GET - on the App Store</div>
+    </div>
+    <div class="htz-fbia-smartbanner-action">
+        <a href="https://itunes.apple.com/il/app/haaretz-h-rz/id521559643?mt=8" target="_parent">
+            Install
+        </a>
+        <script>
+
+        </script>
+    </div>
+</div>
+</body>
+</html>

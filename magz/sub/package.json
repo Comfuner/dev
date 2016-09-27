@@ -1,0 +1,21 @@
+{
+  "name": "htz-inter",
+  "version": "4.0.0",
+  "author": {
+    "name": "you"
+  },
+  "resoUrl": "http://www.haaretz.co.il/st/c/static/resources/",
+  "prodUrl": "http://www.haaretz.co.il/st/c/prod/global/magz/sub2016/0",
+  "srcDirectory": "./src",
+  "srcJavascript": "./js",
+  "srcCss": "./stylesheets",
+  "srcData": "./data",
+  "testDirectory": "./test",
+  "tgtDirectory": "./build",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-cssmin": "",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-processhtml": ""
+}
+}

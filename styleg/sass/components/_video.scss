@@ -1,0 +1,70 @@
+$aspects : (
+'SQUARE': 1, // Overhead
+'HED' : 1.25, // HED Graphics
+'TV' : 1.333333, // TV NTSC/PAL
+'HDTV' : 1.777778, // HDTV
+'WIDE' : 1.85, // Widescreen LetterBox
+'CINEMA' : 2.35, // CinemaScope
+);
+
+%anyVideoContainer {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    & iframe,
+    & object,
+    & embed {
+      body {
+        background-color: rgba(0, 0, 0, 0);
+      }
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+@mixin videoAspects {
+  @each $aspect-name,$aspect-value in $aspects {
+    .inter-videoContainer-#{$aspect-name} {
+      padding-bottom: ((1 / $aspect-value) * 100)#{'%'};
+      @extend %anyVideoContainer;
+    }
+  }
+}
+@include videoAspects;
+
+.youtubeplayButton {
+  width:68px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  cursor:pointer;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  opacity:0.9;
+  transition: all 0.25s ease-in-out;
+  &:hover {
+    -webkit-filter: grayscale(0%);
+    transform: translate(-50%,-50%);
+    filter: grayscale(0%);
+    opacity:1;
+  }
+}
+
+.youtubeLogo {
+  position:absolute;
+  width:88px;
+  right:0;
+  bottom:0;
+  margin:12px;
+  opacity:0.8;
+}
+
+.fakeyoutubebg {
+  background-position: center center;
+  background-size: cover;
+}

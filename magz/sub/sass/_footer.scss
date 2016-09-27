@@ -1,0 +1,50 @@
+//*--------------------------------------------------------------*/
+//  Footer
+//*--------------------------------------------------------------*/
+
+$layout-row-padding: 12px;
+
+footer{
+  //margin-top: $layout-row-padding;
+  font-family:$main-font;
+  //margin-top:48px;
+  background: #323232;
+  border-top: 2px solid $main-color;
+  padding: 12px 5%;
+  color: white;
+  text-align: center;
+  p{
+    margin: 0;
+    padding: 0 0 12px ;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  .links a{
+    border-left: 1px solid white;
+    padding: 0 6px;
+    font-size: 14px;
+    &:last-child{
+      border-left: 0px solid white;
+    }
+  }
+  .logos a{
+    color: $main-color;
+    font-size: 36px;
+  }
+  .logo{
+    font-family:htzIcons;
+    color: $main-color;
+    font-size: 48px;
+  }
+  .logos a{
+    font-family:htzIcons;
+    padding: 6px;
+  }
+  .rights{
+    border-top: 2px solid $main-color;
+    padding-top: 12px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,365 @@
+@import url(http://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+/* line 48, ../sass/_range.scss */
+[type=range] {
+  -webkit-appearance: none;
+  margin: 0px 0;
+  width: 100%;
+}
+/* line 53, ../sass/_range.scss */
+[type=range]:focus {
+  outline: none;
+}
+/* line 57, ../sass/_range.scss */
+[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  transition: all .2s ease;
+  box-shadow: 0px 0px 0px #222, 0 0 0px #2f2f2f;
+  background: #222;
+  border: 0px solid #000;
+  border-radius: 5px;
+}
+/* line 65, ../sass/_range.scss */
+[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #111, 0 0 0px #1e1e1e;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #222;
+  height: 0px;
+  width: 0px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: 0.5px;
+}
+/* line 71, ../sass/_range.scss */
+[type=range]:focus::-webkit-slider-runnable-track {
+  background: #2f2f2f;
+}
+/* line 75, ../sass/_range.scss */
+[type=range]::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  transition: all .2s ease;
+  box-shadow: 0px 0px 0px #222, 0 0 0px #2f2f2f;
+  background: #222;
+  border: 0px solid #000;
+  border-radius: 5px;
+}
+/* line 83, ../sass/_range.scss */
+[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #111, 0 0 0px #1e1e1e;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #222;
+  height: 0px;
+  width: 0px;
+  cursor: pointer;
+}
+/* line 87, ../sass/_range.scss */
+[type=range]::-ms-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  transition: all .2s ease;
+  background: transparent;
+  border-color: transparent;
+  border-width: 0px 0;
+  color: transparent;
+}
+/* line 95, ../sass/_range.scss */
+[type=range]::-ms-fill-lower {
+  box-shadow: 0px 0px 0px #222, 0 0 0px #2f2f2f;
+  background: #151515;
+  border: 0px solid #000;
+  border-radius: 10px;
+}
+/* line 102, ../sass/_range.scss */
+[type=range]::-ms-fill-upper {
+  box-shadow: 0px 0px 0px #222, 0 0 0px #2f2f2f;
+  background: #222;
+  border: 0px solid #000;
+  border-radius: 10px;
+}
+/* line 109, ../sass/_range.scss */
+[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 0px #111, 0 0 0px #1e1e1e;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #222;
+  height: 0px;
+  width: 0px;
+  cursor: pointer;
+}
+/* line 113, ../sass/_range.scss */
+[type=range]:focus::-ms-fill-lower {
+  background: #222;
+}
+/* line 117, ../sass/_range.scss */
+[type=range]:focus::-ms-fill-upper {
+  background: #2f2f2f;
+}
+
+/* line 121, ../sass/_range.scss */
+.item_selected {
+  font-weight: 700;
+}
+
+/* line 124, ../sass/_range.scss */
+.inter_input-range {
+  position: relative;
+}
+/* line 126, ../sass/_range.scss */
+.inter_input-range .inter_input-range-controller {
+  display: table;
+  table-layout: auto;
+  width: 100%;
+}
+@media screen and (max-width: 640px) {
+  /* line 126, ../sass/_range.scss */
+  .inter_input-range .inter_input-range-controller {
+    position: absolute;
+    top: 0;
+  }
+}
+/* line 135, ../sass/_range.scss */
+.inter_input-range .inter_input-range-controller .inter_input-play-container {
+  display: table-cell;
+  height: 50px;
+}
+@media screen and (max-width: 640px) {
+  /* line 135, ../sass/_range.scss */
+  .inter_input-range .inter_input-range-controller .inter_input-play-container {
+    display: block;
+    opacity: 0;
+  }
+}
+/* line 147, ../sass/_range.scss */
+.inter_input-range .inter_input-range-controller .inter_input-play-container button {
+  cursor: pointer;
+  font-family: htzIcons;
+  border: 0;
+  color: #222;
+  background: 0;
+  font-size: 36px;
+  height: 50px;
+  text-align: center;
+  width: 100%;
+}
+/* line 163, ../sass/_range.scss */
+.inter_input-range .inter_input-range-controller .inter_input-range-container {
+  display: table-cell;
+  vertical-align: middle;
+}
+@media screen and (max-width: 640px) {
+  /* line 163, ../sass/_range.scss */
+  .inter_input-range .inter_input-range-controller .inter_input-range-container {
+    display: none;
+  }
+}
+/* line 170, ../sass/_range.scss */
+.inter_input-range .inter_input-range-controller .inter_input-range-container .inter_input-range-labels {
+  width: 100%;
+  font-size: 0;
+  white-space: nowrap;
+  margin-top: -5px;
+}
+/* line 177, ../sass/_range.scss */
+.inter_input-range .inter_input-range-controller .inter_input-range-container .inter_input-range-labels span {
+  cursor: pointer;
+  font-size: 14px;
+  width: 33.33%;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  padding-top: 12px;
+}
+/* line 185, ../sass/_range.scss */
+.inter_input-range .inter_input-range-controller .inter_input-range-container .inter_input-range-labels span::after {
+  content: "";
+  height: 8px;
+  width: 1px;
+  background: #222;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+/* line 194, ../sass/_range.scss */
+.inter_input-range .inter_input-range-controller .inter_input-range-container .inter_input-range-labels span:first-child {
+  text-align: left;
+}
+/* line 196, ../sass/_range.scss */
+.inter_input-range .inter_input-range-controller .inter_input-range-container .inter_input-range-labels span:first-child::after {
+  left: 0%;
+  margin-left: 8px;
+}
+/* line 201, ../sass/_range.scss */
+.inter_input-range .inter_input-range-controller .inter_input-range-container .inter_input-range-labels span:last-child {
+  text-align: right;
+}
+/* line 203, ../sass/_range.scss */
+.inter_input-range .inter_input-range-controller .inter_input-range-container .inter_input-range-labels span:last-child::after {
+  left: 100%;
+  margin-left: -8px;
+}
+/* line 212, ../sass/_range.scss */
+.inter_input-range .animateToggle {
+  animation: toggler 1s cubic-bezier(0.55, 0.06, 0.68, 0.19) 1;
+}
+/* line 215, ../sass/_range.scss */
+.inter_input-range .playState {
+  z-index: 2;
+  position: absolute;
+  display: block;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  font-family: htzIcons;
+  font-size: 48px;
+  color: #fff;
+}
+@keyframes toggler {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    -web-transform: translate(-50%, -50%) scale(1);
+    -moz-transform: translate(-50%, -50%) scale(1);
+    -ms-transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    -web-transform: translate(-50%, -50%) scale(2);
+    -moz-transform: translate(-50%, -50%) scale(2);
+    -ms-transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+/* line 250, ../sass/_range.scss */
+.inter_input-range .inter_input-range-stage {
+  font-size: 0;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+/* line 255, ../sass/_range.scss */
+.inter_input-range .inter_input-range-stage .imgs_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: -8px;
+}
+/* line 261, ../sass/_range.scss */
+.inter_input-range .inter_input-range-stage .inter_info {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  display: none;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  padding: 6px;
+  z-index: 2;
+}
+@media screen and (max-width: 640px) {
+  /* line 261, ../sass/_range.scss */
+  .inter_input-range .inter_input-range-stage .inter_info {
+    display: inline-block;
+  }
+}
+/* line 275, ../sass/_range.scss */
+.inter_input-range .inter_input-range-stage .inter_input-vale-play {
+  display: none;
+  opacity: 1;
+  transition: all 0.25s ease-out;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.55);
+}
+@media screen and (max-width: 640px) {
+  /* line 275, ../sass/_range.scss */
+  .inter_input-range .inter_input-range-stage .inter_input-vale-play {
+    display: block;
+  }
+}
+/* line 288, ../sass/_range.scss */
+.inter_input-range .inter_input-range-stage .inter_input-vale-play .center-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* line 298, ../sass/_range.scss */
+.inter_input-range .inter_input-range-stage .inter_input-vale-play .center-box .vale_play {
+  opacity: 1;
+  transition: all 0.5s ease-out;
+  font-family: htzIcons;
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+/* line 305, ../sass/_range.scss */
+.inter_input-range .inter_input-range-stage .inter_input-vale-play .center-box .vale_headline {
+  font-size: 24px;
+}
+/* line 311, ../sass/_range.scss */
+.inter_input-range .inter_input-range-stage img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: opacity 0.75s ease-in-out;
+}
+/* line 316, ../sass/_range.scss */
+.inter_input-range .inter_input-range-stage img.image-off {
+  opacity: 0;
+}
+/* line 319, ../sass/_range.scss */
+.inter_input-range .inter_input-range-stage img.image-on {
+  opacity: 1;
+}
+
+/* line 327, ../sass/_range.scss */
+.image-off {
+  opacity: 0 !important;
+}
+
+@font-face {
+  font-family: "htzIcons";
+  src: url("http://www.haaretz.co.il/st/c/prod/resources/fonts/icons/htzIcons.eot?#iefix") format("embedded-opentype"), url("http://www.haaretz.co.il/st/c/prod/resources/fonts/icons/htzIcons.woff") format("woff"), url("http://www.haaretz.co.il/st/c/prod/resources/fonts/icons/htzIcons.ttf") format("truetype"), url("http://www.haaretz.co.il/st/c/prod/resources/fonts/icons/htzIcons.svg#htzIcons") format("svg");
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "htzIcons";
+    src: url("http://www.haaretz.co.il/st/c/prod/resources/fonts/icons/htzIcons.svg#htzIcons") format("svg");
+  }
+}
+/* line 18, ../sass/styles.scss */
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: "open sans hebrew";
+}
+
+/* line 23, ../sass/styles.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 26, ../sass/styles.scss */
+.inter-img-w {
+  width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=styles.css.map */

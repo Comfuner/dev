@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <title>Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html,body {
+            margin:0;
+            padding:0;
+            overflow:hidden;
+        }
+        .htz-fbia-smartbanner {
+            font-size:0;
+            overflow: hidden;
+            background:#f2f2f2;
+        }
+        .htz-fbia-smartbanner a {
+            text-decoration: none;
+            display:block;
+            oveflow:hidden;
+        }
+        .htz-fbia-smartbanner img {
+            cursor:pointer;
+            display:inline-block;
+            border: 2px solid lightgrey;
+            font-size:0;
+            width:100%;
+        }
+        #part1 {
+            /*//float:left;*/
+        }
+        #part2 {
+            /*float:right;*/
+        }
+    </style>
+    <script src="js/isMobile.min.js"></script>
+</head>
+<body>
+<div class="htz-fbia-smartbanner">
+    <a id="linker" href="#" target="_parent">
+    <img id="part1" src="img/heb-138-ios.jpg"/>
+    </a>
+</div>
+<script>
+    if (isMobile.apple.device) {
+        document.getElementById('part1').setAttribute('src','img/heb-138-ios.jpg');
+        document.getElementById('linker').setAttribute('href','https://itunes.apple.com/il/app/haaretz-h-rz/id521559643?mt=8');
+    } else if (isMobile.android.device) {
+        document.getElementById('part1').setAttribute('src','img/heb-138-android.jpg');
+        document.getElementById('linker').setAttribute('href','https://play.google.com/store/apps/details?id=com.haaretz')
+    } else {
+        document.getElementById('part1').setAttribute('src','img/heb-138-ios.jpg');
+        document.getElementById('linker').setAttribute('href','http://www.haaretz.co.il')
+    }
+</script>
+</body>
+</html>

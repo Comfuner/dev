@@ -1,0 +1,100 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto+Slab';
+
+.inter_main-container {
+  font-family: "Roboto Slab", Arial;
+}
+
+.box_display {
+  padding: 6px;
+  background-color: lightgray;
+}
+.fontspace {
+  display:inline-block;
+  width:6%;
+  border: 1px dashed #c4c4c4;
+  span {
+    display:block;
+    text-align:center;
+    padding:6px;
+    line-height:1;
+  }
+  .fontface {
+    font-size:24px;
+  }
+  .textface {
+    font-family: Arial;
+    font-size: 18px;
+    background-color: #d9d9d9;
+  }
+}
+
+.colorspace {
+  display:inline-block;
+  width:25%;
+  border: 1px dashed #c4c4c4;
+  //white-space:nowrap;
+
+  .colorTest {
+    height:100px;
+    line-height:0px;
+  }
+  .colorTestName {
+    padding:6px;
+    font-size:14px;
+    font-weight:700;
+    background-color:lightgray;
+    min-height: 36px;
+  }
+  span {
+    display:block;
+    text-align:center;
+  }
+}
+
+.fontsize_heb {
+  font-family:"Open Sans Hebrew";
+  direction:rtl;
+}
+
+.font_headline {
+  font-size:14px;
+  font-weight:700;
+  margin-bottom: 24px;
+
+}
+
+.allVideoContainers {
+  .displayVideo {
+    margin-bottom:48px;
+  }
+}
+
+.inter_icon {
+  width:100%;
+  text-align:center;
+  display:block;
+}
+
+.display_button ,input[class^="inter_input"]  {
+  width:100%;
+  text-align:center;
+  display:block;
+}
+
+.inter_input-color {
+  height:50px;
+}
+
+.redSquareBox {
+  background-color: red;
+  height: 100px;
+  display: inline-block;
+  margin: 0;
+}
+
+.blueSquareBox {
+  background-color: blue;
+  height: 100px;
+  display: inline-block;
+  margin: 0;
+}

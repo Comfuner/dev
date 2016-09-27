@@ -1,0 +1,54 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+  <style>
+    .m{fill: #fff}
+    .m-bg{fill: #60C700}
+    .commet-wrapper {
+      -ms-transform: translate(76px, 76px) scale(-1, .57) skewY(50deg);
+      -webkit-transform: translate(76px, 76px) scale(-1, .57) skewY(50deg);
+      transform: translate(76px, 76px) scale(-1, .57) skewY(50deg);
+    }
+    .commet {
+      fill: #14781e;
+      -webkit-animation: color-change 2s linear infinite .8s, spin 1s linear infinite;
+      animation: color-change 2s linear infinite .8s, spin 1s linear infinite;
+    }
+
+    @-webkit-keyframes color-change {
+      0%, 100% {fill: #14781e;}
+      50% {fill: #ebffd9;}
+    }
+
+    @-webkit-keyframes spin {
+      0% {transform: rotate(360deg);}
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    @keyframes color-change {
+      0%, 100% {fill: #14781e;}
+      50% {fill: #ebffd9;}
+    }
+
+    @keyframes spin {
+      0% {transform: rotate(360deg);}
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  </style>
+  
+  <g id="lower">
+    <circle class="m-bg" cx="80" cy="80" r="50"/>
+    <path class="m" d="M109,63.262V105H95V71.345L109,63.262z M51,96.749V105h13V89.244L51,96.749z M82.483,78.572L80.973,85 h-0.181l-1.128-4.801L69.341,86.16L74.799,105h12.168l7.141-33.14L82.483,78.572z"/>
+  </g>
+  <g class="commet-wrapper">
+    <path class="commet" d="M0,70c35.899,0,48-31.34,48-70c0-19,27-19,27,0C75,38.66,41.421,70,0,70z">
+    </path>
+  </g>
+  <g id="upper">
+    <path class="m-bg" d="M123.3,55C109.493,31.086,78.914,22.893,55,36.7S22.893,81.086,36.7,105L123.3,55z"/>
+    <path class="m" d="M80.118,82.129L70.04,88.574L64,67.722v23.146l-13,7.08V56h22.981L80.118,82.129z M109,66.13V56H87.784 l-5.716,24.336l11.505-5.996L95,67.722v6.171L109,66.13z"/>
+  </g>
+</svg>

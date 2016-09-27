@@ -1,0 +1,228 @@
+@charset "UTF-8";
+$default-flow: rtl;
+$main-color: rgb(9, 165, 217);
+$domainLoadText: "טוען נתונים..";
+$z-index-top: 10001;
+
+.full .mp .inter-caption {
+    .t & {
+      padding: 0 15px !important;
+    }
+    .s & {
+      padding: 0 15px !important;
+    }
+    .m & {
+      padding: 0 15px !important;
+    }
+  }
+
+.op {
+  .t & {
+    height:500px !important;
+    background-size: cover;
+
+    background-image: url('http://www.haaretz.co.il/polopoly_fs/1.3062752.1473333344!/image/3092246289.jpg_gen/derivatives/size_468xAuto/3092246289.jpg') !important;
+  }
+  .s & {
+    background-image: url('http://www.haaretz.co.il/polopoly_fs/1.3062752.1473333344!/image/3092246289.jpg_gen/derivatives/size_468xAuto/3092246289.jpg') !important;
+  }
+}
+#chap0 {
+  background: rgb(21, 57, 79);
+  background: -moz-linear-gradient(top,  #06141d 20%, rgba(0,0,0,1) 100%);
+  background: -webkit-linear-gradient(top,  #06141d 20%,rgba(0,0,0,1) 100%);
+  background: linear-gradient(to bottom, #06141d 20%,rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30c7ff', endColorstr='#000000',GradientType=0 );
+  color:#fff;
+  margin-bottom: 0 !important;
+}
+h3.th.cntr {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+}
+.inter-caption {
+  color:#fff;
+}
+.tm,.c a,.inter-share button,.open-inter-caption span {
+  color: #fff !important;
+}
+p.tl {
+  color:#fff !important;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+  .t & {
+    color: $main-color !important;
+  }
+  .s & {
+    color: $main-color !important;
+  }
+}
+.inter-row {
+  color:#fff;
+  &:last-child {
+  margin-bottom:0 !important;
+    padding-bottom:24px !important;
+}
+}
+//.opHead {
+//  font-size:9rem !important;
+//  line-height:9.5rem !important;
+//  .t & {
+//    font-size:5rem !important;
+//    line-height:5.5rem !important;
+//  }
+//  .s & {
+//    font-size:5rem !important;
+//    line-height:5.5rem !important;
+//  }
+//}
+.op {
+  //background-image: url('https://images.sciencedaily.com/2010/02/100224165231_1_900x600.jpg') !important;
+}
+.opCont {
+  background: none !important;
+}
+.opAbsCont {
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, #06141d 90%);
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%, #06141d 90%);
+  background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%, #06141d 90%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#30c7ff',GradientType=0 );
+  .t & {background:none !important}
+  .s & {background:none !important}
+  .m & {background:none !important}
+
+}
+
+.inter_vale {
+  position: fixed;
+  top: 0;
+  bottom: 0%;
+  left: 0;
+  right: 0%;
+  width:100%;
+  height:100%;
+  //background: repeating-linear-gradient(
+  //                -45deg,
+  //                rgba(255,255,255,1),
+  //                rgba(255,255,255,1) 2px,
+  //                rgba(255,255,255,0.85) 2px,
+  //                rgba(255,255,255,0.85) 4px);
+  background: #fff;
+  z-index: 9999999;
+  div, img {
+    text-align:center;
+    position: absolute;
+    z-index: 99;
+    overflow: visible;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 6rem;
+    width: 6rem;
+    svg {
+      height: 6rem;
+      width: 6rem;
+    }
+    &::after {
+      font-family: "open sans hebrew";
+      color: #222;
+      font-weight: 700;
+      font-size: 1rem;
+      content: $domainLoadText;
+      direction: $default-flow;
+      display:inline-block;
+      white-space: normal;
+    }
+  }
+}
+
+.alef {
+  fill: #fff
+}
+
+.alef-bg {
+  fill: $main-color
+}
+
+.commet-wrapper {
+  -ms-transform: translate(76px, 76px) scale(-1, .57) skewY(50deg);
+  -webkit-transform: translate(76px, 76px) scale(-1, .57) skewY(50deg);
+  transform: translate(76px, 76px) scale(-1, .57) skewY(50deg);
+}
+
+.commet {
+  fill: darken($main-color,20%);
+  -webkit-animation: color-change 2s linear infinite .8s, spin 1s linear infinite;
+  animation: color-change 2s linear infinite .8s, spin 1s linear infinite;
+}
+
+@-webkit-keyframes color-change {
+  0%, 100% {
+    fill: darken($main-color,20%);
+  }
+  50% {
+    fill: lighten($main-color,20%);
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes color-change {
+  0%, 100% {
+    fill: darken($main-color,20%);
+  }
+  50% {
+    fill: lighten($main-color,20%);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+
+.youtubeplayButton {
+  width:68px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  cursor:pointer;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  opacity:0.9;
+  transition: all 0.25s ease-in-out;
+  &:hover {
+    -webkit-filter: grayscale(0%);
+    transform: translate(-50%,-50%);
+    filter: grayscale(0%);
+    opacity:1;
+  }
+}
+
+.youtubeLogo {
+  position:absolute;
+  width:88px;
+  right:0;
+  bottom:0;
+  margin:12px;
+  opacity:0.8;
+}
+
+.fakeyoutubebg {
+  background-position: center center;
+  background-size: cover;
+}

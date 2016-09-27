@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+$domains: (
+        heb: "http://www.haaretz.co.il/",
+        eng: "http://www.haaretz.com/",
+        tm: "http://www.themarker.com/"
+);
+
+
+@import "normalize";
+@import "trumps";
+@import "setup";
+@import "mixins";
+@import "colors";
+@import "placeholders";
+@import "helpers";
+@import "fonts";
+
+// --- Domains --- //
+
+
+// --- Domain Switcher --- //
+
+@function setDomain($domain) {
+  @if $domain == "heb" {
+    $main-font: "open sans hebrew";
+    $main-color: $color-haaretz-blue;
+    $default-dir: right;
+    $opposite-dir: left;
+    $default-flow: rtl;
+    $opposite-flow: ltr;
+    $translate-sign: '-';
+    $domainLoadText: 'טוען נתונים';
+    $logoYposition: 100px;
+  @return $main-color,$default-dir,$opposite-dir,$default-flow,$opposite-flow,$main-font,$translate-sign,$domainLoadText, $logoYposition;
+  }
+  @else if $domain == "eng" {
+    $main-font: Georgia;
+    $main-color: $color-eng-primary;
+    $default-dir: left;
+    $opposite-dir: right;
+    $default-flow: ltr;
+    $opposite-flow: rtl;
+    $translate-sign: '';
+    $domainLoadText: 'Loading Data';
+    $logoYposition: 50px;
+  @return $main-color,$default-dir,$opposite-dir,$default-flow,$opposite-flow,$main-font,$translate-sign,$domainLoadText, $logoYposition;
+  }
+  @else if $domain == "tm" {
+    $main-font: "open sans hebrew";
+    $main-color: $color-marker-brand;
+    $default-dir: right;
+    $opposite-dir: left;
+    $default-flow: rtl;
+    $opposite-flow: ltr;
+    $translate-sign: '-';
+    $domainLoadText: 'טוען נתונים';
+    $logoYposition: 0px;
+  @return $main-color,$default-dir,$opposite-dir,$default-flow,$opposite-flow,$main-font,$translate-sign,$domainLoadText, $logoYposition;
+  } @else {
+    @warn "Domain was not initialized"
+  }
+}
+
+$settings: setDomain($domain);
+$main-color: nth($settings,1) !global;
+$default-dir: nth($settings,2) !global;
+$opposite-dir: nth($settings,3) !global;
+$default-flow: nth($settings,4) !global;
+$opposite-flow: nth($settings,5) !global;
+$main-font: nth($settings,6) !global;
+$translate-sign: nth($settings,7) !global;
+$domainLoadText: nth($settings,8) !global;
+$logoYposition: nth($settings,9) !global;

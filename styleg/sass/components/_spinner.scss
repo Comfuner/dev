@@ -1,0 +1,55 @@
+.alef {
+  fill: #fff
+}
+
+.alef-bg {
+  fill: $main-color
+}
+
+.commet-wrapper {
+  -ms-transform: translate(76px, 76px) scale(-1, .57) skewY(50deg);
+  -webkit-transform: translate(76px, 76px) scale(-1, .57) skewY(50deg);
+  transform: translate(76px, 76px) scale(-1, .57) skewY(50deg);
+}
+
+.commet {
+  fill: darken($main-color,20%);
+  -webkit-animation: color-change 2s linear infinite .8s, spin 1s linear infinite;
+  animation: color-change 2s linear infinite .8s, spin 1s linear infinite;
+}
+
+@-webkit-keyframes color-change {
+  0%, 100% {
+    fill: darken($main-color,20%);
+  }
+  50% {
+    fill: lighten($main-color,20%);
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes color-change {
+  0%, 100% {
+    fill: darken($main-color,20%);
+  }
+  50% {
+    fill: lighten($main-color,20%);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/2.0.2/lazysizes.min.js"></script>
+    <script src="js/isMobile.min.js"></script>
+    <title>Stack Slider</title>
+</head>
+<body>
+<div class="inter_input-range">
+    <div class="inter_input-range-stage" data-state="pause">
+        <div class="inter_info">xxxx</div>
+        <div class="playState">P</div>
+        <div class="inter_input-vale-play">
+            <div class="center-box">
+                <div class="vale_play">P</div>
+                <!--<div class="vale_headline">כותרת כלשהיא</div>-->
+            </div>
+        </div>
+        <img style="opacity: 1!important;position:relative" class="inter-img-w lazyload" data-sizes="auto"
+             data-src="http://www.haaretz.co.il/polopoly_fs/1.3073288.1474359034!/image/3817594901.jpg"
+             src="http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif"
+             data-srcset="http://www.haaretz.co.il/polopoly_fs/1.3073288.1474359034!/image/3817594901.jpg_gen/derivatives/size_468xAuto/3817594901.jpg 468w, http://www.haaretz.co.il/polopoly_fs/1.3073288.1474359034!/image/3817594901.jpg_gen/derivatives/size_640xAuto/3817594901.jpg 600w, http://www.haaretz.co.il/polopoly_fs/1.3073288.1474359034!/image/3817594901.jpg_gen/derivatives/size_748xAuto/3817594901.jpg 768w, http://www.haaretz.co.il/polopoly_fs/1.3073288.1474359034!/image/3817594901.jpg_gen/derivatives/size_936xAuto/3817594901.jpg 1024w, http://www.haaretz.co.il/polopoly_fs/1.3073288.1474359034!/image/3817594901.jpg_gen/derivatives/size_1496xAuto/3817594901.jpg 1280w"/>
+        <img class="inter-img-w lazyload" data-sizes="auto"
+             data-src="http://www.haaretz.co.il/polopoly_fs/1.3073290.1474359151!/image/3739994533.jpg"
+             src="http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif"
+             data-srcset="http://www.haaretz.co.il/polopoly_fs/1.3073290.1474359151!/image/3739994533.jpg_gen/derivatives/size_468xAuto/3739994533.jpg 468w, http://www.haaretz.co.il/polopoly_fs/1.3073290.1474359151!/image/3739994533.jpg_gen/derivatives/size_640xAuto/3739994533.jpg 600w, http://www.haaretz.co.il/polopoly_fs/1.3073290.1474359151!/image/3739994533.jpg_gen/derivatives/size_748xAuto/3739994533.jpg 768w, http://www.haaretz.co.il/polopoly_fs/1.3073290.1474359151!/image/3739994533.jpg_gen/derivatives/size_936xAuto/3739994533.jpg 1024w, http://www.haaretz.co.il/polopoly_fs/1.3073290.1474359151!/image/3739994533.jpg_gen/derivatives/size_1496xAuto/3739994533.jpg 1280w"/>
+        <img class="inter-img-w lazyload" data-sizes="auto"
+             data-src="http://www.haaretz.co.il/polopoly_fs/1.3073295.1474359259!/image/633819585.jpg"
+             src="http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif"
+             data-srcset="http://www.haaretz.co.il/polopoly_fs/1.3073295.1474359259!/image/633819585.jpg_gen/derivatives/size_468xAuto/633819585.jpg 468w, http://www.haaretz.co.il/polopoly_fs/1.3073295.1474359259!/image/633819585.jpg_gen/derivatives/size_640xAuto/633819585.jpg 600w, http://www.haaretz.co.il/polopoly_fs/1.3073295.1474359259!/image/633819585.jpg_gen/derivatives/size_748xAuto/633819585.jpg 768w, http://www.haaretz.co.il/polopoly_fs/1.3073295.1474359259!/image/633819585.jpg_gen/derivatives/size_936xAuto/633819585.jpg 1024w, http://www.haaretz.co.il/polopoly_fs/1.3073295.1474359259!/image/633819585.jpg_gen/derivatives/size_1496xAuto/633819585.jpg 1280w"/>
+    </div>
+    <div class="inter_input-range-controller">
+        <div class="inter_input-play-container" style="width:44px">
+            <button id="range1play" data-state="pause" type="button">P</button>
+        </div>
+        <div class="inter_input-range-container">
+            <input id="range1" data-state="pause" value="0" type="range" name="points" min="0" max="2">
+            <div class="inter_input-range-labels">
+                <span class="item_selected">2001</span>
+                <span>2002</span>
+                <span>2003</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
+<script src="js/stackslider.js"></script>
+</body>
+</html>

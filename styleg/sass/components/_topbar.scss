@@ -1,0 +1,144 @@
+$currentDomain: map_get($domains,$domain);
+
+.inter_topbar {
+  direction:$default-flow;
+  box-sizing: border-box;
+  z-index:100;
+  transition: all 0.25s ease-in-out;
+  font-family: $main-font;
+  border-top: 2px solid $main-color;
+  position: fixed;
+  height: 44px;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  @extend %inter_box_shadow;
+  .inter_bar-logo {
+    transition: all 0.25s ease-in-out;
+    height:65%;
+    position:absolute;
+    left:50%;
+    top:50%;
+    @include prefix((transform: translate(-50%, -50%)));
+    vertical-align: middle;
+    // todo: decide which logo insert method is preferable;
+    height:50px;
+    width:150px;
+    background: url($currentDomain +'st/c/static/resources/img/logos/logo.gif');
+    background-position-y: $logoYposition;
+    img {
+      height:100%;
+      width:auto;
+    }
+  }
+  .inter_topbar-shares {
+    font-size:0;
+    white-space: nowrap;
+    button {
+      cursor: pointer;
+      font-family: htzIcons;
+      color: $main-color;
+      font-size: 24px;
+      padding: 4px 10px;
+      &:hover {
+        color: #fff;
+        background: #353535;
+    }
+    }
+    font-family: htzIcons;
+    display: inline-block;
+    #{$opposite-dir}: 0;
+    position: absolute;
+    top: 50%;
+    @include prefix((transform: translateY(-50%)));
+    button {
+      transition:all 0.25s ease-in-out;
+      //@if $domain == "eng" {
+      //  &:last-of-type {
+      //    margin-#{$opposite-dir}: 24px;
+      //  }
+      //} @else {
+      //  &:first-of-type {
+      //    margin-#{$opposite-dir}: 24px;
+      //  }
+      //}
+    }
+  }
+  .inter_topbar-button {
+    &.is-active {
+      background-color:#353535 !important;
+      .hamburger-inner, .hamburger-inner:before, .hamburger-inner:after {
+        background-color:#fff !important;
+      }
+    }
+    top:50%;
+    @include prefix((transform:translateY(-50%)));
+    background: #fff;
+    z-index:102;
+    position:absolute;
+    float: $default-dir;
+    //margin-#{$default-dir}: 12px;
+  }
+  .inter_topbar-menu {
+    transition: all 0.33s ease-in-out;
+    overflow: auto;
+    max-height:0;
+    z-index:101;
+    background: $color-dark-gray;
+    color:#fff;
+    list-style-type: none;
+    position:absolute;
+    display:inline-block;
+    top:42px;
+    //#{$default-dir}:24px;
+    visibility: hidden;
+    width:200px;
+    &.active {
+      visibility: visible;
+      max-height: calc(100vh - 50px);
+    }
+    li {
+      transition: transform 0.33s ease-in-out;
+      @include prefix((transform:translateY(-500px)));
+      cursor:pointer;
+      &:hover {
+        background:$main-color;
+        color: #222 !important;
+      }
+      &.active_menu {
+        @include prefix((transform:translateY(0%)));
+      }
+      &.divider {
+        padding:0!important;
+        margin:20px 0px;
+        width:100%;
+        //width: calc(100% - 20px);
+        height:2px;
+        background:$main-color;
+      }
+      a {
+        display:block;
+        text-decoration:none;
+        color:#fff;
+        padding:10px;
+        &:hover {
+          background:$main-color;
+          color: #222 !important;
+        }
+      }
+      &.outerlink {
+        transition:all 0.25s ease-in-out;
+        background: darken($main-color,20);
+      }
+      &.outerlink:hover {
+        border-bottom: 1px solid #fff;
+        background: $main-color;
+      }
+    }
+  }
+  a {
+    &:focus {
+      border:1px dashed lightgray;
+    }
+  }
+}

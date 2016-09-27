@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
+</head>
+<body>
+<div class="inter_topbar mb-loose">
+    <button class="inter_topbar-button hamburger hamburger--squeeze" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+    </button>
+    <ul class="inter_topbar-menu">
+        <li><a class="scrollease off74" href="#chap0">ראשי</a></li>
+        <li><a class="scrollease off74" href="#chap1">פתיחה</a></li>
+        <li><a class="scrollease off74" href="#scr0">לוחמים</a></li>
+        <li><a class="scrollease off74" href="#scr1">רקטות לפי טווח</a></li>
+        <li><a class="scrollease off74" href="#scr3">מצבורי רקטות</a></li>
+        <li><a class="scrollease off74" href="#scr2">טווח כיסוי רקטות</a></li>
+        <li><a class="scrollease off74" href="#scr5">מל"טים</a></li>
+        <li><a class="scrollease off74" href="#scr4">טילי חוף-ים</a></li>
+        <li><a class="scrollease off74" href="#scr7">טילי נ"ט</a></li>
+        <li><a class="scrollease off74" href="#scr6">מערכות נ"מ</a></li>
+    </ul>
+    <a href="http://www.haaretz.co.il" target="_self"><span class="hide_vis">הארץ</span>
+        <div class="inter_bar-logo"><img src="http://www.haaretz.co.il/st/c/static/resources/img/logos/htz-logo.svg">
+        </div>
+    </a>
+    <div class="inter_topbar-shares" s-header="header" s-desc="desc" s-img="http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif" s-link="http://www.haaretz.co.il">
+        <button class="inter_share-f" s-type="main">f</button>
+        <button class="inter_share-t" s-type="main">t</button>
+    </div>
+</div>
+
+<div class="inter_main-container">
+    <div class="inter_row-open inter_row-open--image" style="background-image:url('http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif')"></div>
+    <div class="inter_row-open-textbox inter_tac inter_p">
+        <h1>Test</h1>
+    </div>
+    <div class="gg" data-grid="t" data-grid-gutter="looseV looseH">
+        <div class="redSquareBox col1of2" options="l-col1of2 s-col1of1" data-grid-active="l-col1of2"></div>
+        <div class="blueSquareBox col1of2" data-grid-options="l-col1of2 s-col1of1" data-grid-active="l-col1of2"></div>
+    </div>
+    <div class="inter_row-regular">
+        <div class="inter_head-top-line inter_float inter_float-left">
+            <h2>
+                Font Sizes
+            </h2>
+        </div>
+        <div class="fontsize">
+            <div class="box_display inter_text-xxs">Lorem ipsum</div>
+            <div class="font_headline">.inter_text-xxs</div>
+            <div class="box_display inter_text-xs">Lorem ipsum</div>
+            <div class="font_headline">.inter_text-xs</div>
+            <div class="box_display inter_text-s">Lorem ipsum</div>
+            <div class="font_headline">.inter_text-s</div>
+            <div class="box_display inter_text-r">Lorem ipsum</div>
+            <div class="font_headline">.inter_text-r</div>
+            <div class="box_display inter_text-m">Lorem ipsum</div>
+            <div class="font_headline">.inter_text-m</div>
+            <div class="box_display inter_text-l">Lorem ipsum</div>
+            <div class="font_headline">.inter_text-l</div>
+            <div class="box_display inter_text-xl">Lorem ipsum</div>
+            <div class="font_headline">.inter_text-xl</div>
+            <div class="box_display inter_text-xxl">Lorem ipsum</div>
+            <div class="font_headline">.inter_text-xxl</div>
+            <div class="box_display inter_text-xxxl">Lorem ipsum</div>
+            <div class="font_headline">.inter_text-xxxl</div>
+            <div class="box_display inter_text-l">Lorem ipsum</div>
+            <div class="font_headline">.inter_text-xxxl</div>
+        </div>
+    </div>
+
+
+    <div class="inter_row-regular">
+        <div class="inter_head-top-line inter_float inter_float-right">
+            <h2>
+                HtzIcons Char Map
+            </h2>
+        </div>
+        <div id="htzicons"></div>
+        <div class="inter_head-top-line">
+            <h2>
+                Color Pallets
+            </h2>
+        </div>
+        <div id="availColors"></div>
+        <div class="inter_head-top-line">
+            <h3>
+                Flowing Text
+            </h3>
+        </div>
+        <h2 class="inter_head-s-line">
+            Lorem Ipsum
+        </h2>
+        <p class="inter_text-r">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet purus nunc. Quisque at nisl mi. Quisque sollicitudin nisl urna, quis maximus nibh imperdiet id. Suspendisse potenti. Cras aliquam nisi non lorem euismod fringilla. Nullam varius est interdum est pharetra suscipit. Quisque aliquam vitae risus in fermentum. Nunc eget orci eget lacus porttitor egestas. Proin varius ipsum est, eu fermentum eros facilisis eget.
+        </p>
+        <div class="inter_head-top-line">
+            <h2>
+                Video Containers Aspect Ratios
+            </h2>
+        </div>
+        <div class="allVideoContainers">
+            <div class="inter_head-bottom-line">
+                    <span class="inter_text-m">
+                        <strong>CinemaScope</strong> 2.35:1
+                    </span>
+                </div>
+                <div class="displayVideo inter-videoContainer-CINEMA">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Gfl4dbmJsxU?playlist=Gfl4dbmJsxU&controls=0&autoplay=1&wmode=transparent&loop=1&modestbranding=1&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="inter_head-bottom-line">
+                    <span class="inter_text-m">
+                        <strong>Widescreen LetterBox</strong> 1.85:1
+                    </span>
+                </div>
+                <div class="displayVideo inter-videoContainer-WIDE">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/QtY042MllA4?playlist=QtY042MllA4&controls=0&autoplay=1&wmode=transparent&loop=1&modestbranding=1&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="inter_head-bottom-line">
+                    <span class="inter_text-m">
+                        <strong>HDTV</strong> 1.78:1
+                    </span>
+            </div>
+            <div class="displayVideo inter-videoContainer-HDTV">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/P4Wr8hkyq44?playlist=P4Wr8hkyq44&controls=0&autoplay=1&wmode=transparent&loop=1&modestbranding=1&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="inter_head-bottom-line">
+                    <span class="inter_text-m">
+                        <strong>TV</strong> 1.33:1
+                    </span>
+            </div>
+            <div class="displayVideo inter-videoContainer-TV">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/iLOfQBqtWlE?playlist=iLOfQBqtWlE&controls=0&autoplay=1&wmode=transparent&loop=1&modestbranding=1&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="inter_head-top-line">
+            <h2>
+                Fake Video Mask
+            </h2>
+        </div>
+
+        <div id="sNlOGUJ1Rfs" class="inter-video-mask inter-videoContainer-HDTV"></div>
+
+
+        <div class="inter_head-top-line">
+            <h2>
+                Images
+            </h2>
+        </div>
+        <div class="allImagesContainer">
+        <div class="inter_head-bottom-line">
+                    <span class="inter_text-m">
+                        Responsive Width Image
+                    </span>
+        </div>
+
+                    <figure class="inter_img-w">
+                        <img src="http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif"/>
+                    </figure>
+            <div class="inter_head-bottom-line">
+                    <span class="inter_text-m">
+                        Responsive circle Image
+                    </span>
+            </div>
+
+            <figure class="inter_img-c">
+                <img src="http://www.haaretz.co.il/st/c/static/resources/img/thumb-cube.gif"/>
+            </figure>
+        </div>
+        <div class="inter_head-bottom-line">
+                    <span class="inter_text-m">
+                        icons
+                    </span>
+        </div>
+        <div class="allIconsContainers">
+            <span class="inter_icon inter_icon-heb-xxxl">
+                H
+            </span>
+            <br>
+            <span class="inter_icon inter_icon-heb-xxl">
+                H
+            </span>
+            <br>
+            <span class="inter_icon inter_icon-heb-xl">
+                H
+            </span>
+            <br>
+            <span class="inter_icon inter_icon-heb-l">
+                H
+            </span>
+            <br>
+            <span class="inter_icon inter_icon-heb-m">
+                H
+            </span>
+            <br>
+            <span class="inter_icon inter_icon-heb-s">
+                H
+            </span>
+            <br>
+            <span class="inter_icon inter_icon-heb-xs">
+                H
+            </span>
+            <br>
+            <span class="inter_icon inter_icon-heb-xxs">
+                H
+            </span>
+            <br>
+        </div>
+        <div class="inter_head-top-line">
+            <h2>
+                Form
+            </h2>
+        </div>
+        <div class="allFormContainer">
+            <div class="inter_head-bottom-line">
+                        <span class="inter_text-m">
+                            Text Fields
+                        </span>
+            </div>
+
+            <div class="inter_form-field mb-loose">
+                <input id="text" name="text" placeholder="PlaceHolder">
+                <div class="inter_form-note">Remark</div>
+            </div>
+            <div class="inter_form-field mb-loose is-error">
+                <input id="textinerror" name="text" placeholder="PlaceHolder in Error">
+                <div class="inter_form-note">Remark</div>
+            </div>
+            <div class="inter_form-field mb-loose">
+                <label for="select">Select:</label>
+                <select id="select">
+                    <optgroup label="set A">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                    </optgroup>
+                    <optgroup label="set B">
+                        <option>option 3</option>
+                        <option>option 4</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+        <button class="display_button inter-button--s">
+            I am a small button!
+        </button>
+        <br>
+        <button class="display_button inter-button">
+            I am a button!
+        </button>
+        <br>
+        <button class="display_button inter-button--l">
+            I am a large button!
+        </button>
+        <br>
+        <button class="display_button inter-button--xl">
+            I am a xtra large button!
+        </button>
+        <br>
+        <p class="inter_text-r">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus iaculis metus at laoreet. Pellentesque dignissim vitae nibh vitae pulvinar. Curabitur orci justo, volutpat vitae convallis vel, ultrices vel nisl. Nullam viverra blandit felis et pellentesque. Suspendisse mi felis, vulputate vitae velit vitae, condimentum rhoncus ante. Donec sagittis quis purus ut hendrerit. Integer cursus risus orci, in ornare justo auctor et. Quisque <button class="inter-button--inline">I am an Inline Button</button> arcu sed ullamcorper accumsan. Ut consequat, mi et interdum convallis, elit ipsum hendrerit elit, eget elementum purus mi vitae nibh. Pellentesque bibendum magna eget odio euismod, in lobortis mauris venenatis. Ut mollis cursus leo, vel vulputate ligula ullamcorper et. Aenean eu odio sollicitudin, rutrum orci ut, luctus neque. Proin eget hendrerit nulla. Nulla dictum, leo vel tincidunt tincidunt, orci lacus luctus sapien, nec posuere nisi massa id lacus. Nam egestas quam bibendum, accumsan nibh eu, suscipit quam. Sed consectetur elit dapibus mi facilisis, id luctus lorem iaculis.
+        </p>
+        <br>
+        <div class="inter_head-bottom-line">
+                        <span class="inter_text-m">
+                            Color Selector
+                        </span>
+        </div>
+        <input class="inter_input-color" type="color">
+        <br>
+        <div class="inter_head-bottom-line">
+                        <span class="inter_text-m">
+                            Date Picker
+                        </span>
+        </div>
+        <input class="inter_input-datepicker" type="date">
+        <br>
+        <div class="inter_head-bottom-line">
+                        <span class="inter_text-m">
+                            Range Picker
+                        </span>
+        </div>
+        <input class="inter_input-range" type="range" min="0" max="100">
+
+    </div> <!-- -->
+    <div class="inter_row-regular">
+        <div class="slick">
+            <img class="inter_img-w" src="http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif"/>
+            <img class="inter_img-w" src="http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif"/>
+            <img class="inter_img-w" src="http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif"/>
+            <img class="inter_img-w" src="http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif"/>
+        </div>
+    </div>
+</div> <!-- end of main container -->
+
+
+<script src="http://www.haaretz.co.il/st/c/static/resources/js/jquery/jquery-2.1.4.min.js"></script>
+<script src="js/modules/youtubemask.js"></script>
+<script src="js/modules/events.js"></script>
+<script src="js/modules/grid.js"></script>
+<script src="js/modules/slider.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

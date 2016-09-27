@@ -1,0 +1,63 @@
+@import "slick";
+@import "slick-theme";
+
+.body {
+}
+
+.otherArticles {
+  margin-top:48px;
+  background: #222;
+  padding: 24px;
+  .otherArticles_header {
+    margin-bottom:24px;
+    span {
+      display: block;
+      &:nth-child(1) {
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+.slick {
+  direction: ltr;
+  //@media screen and (max-width:600px) {
+    width:75%;
+    margin-left:auto;
+    margin-right:auto;
+  //}
+}
+
+.inter_caro_item {
+  //padding-right:24px;
+  a {
+    text-decoration:none;
+    display:block;
+  }
+  img {
+    width:100%;
+    height: auto;
+  }
+}
+.inter_caro_desc {
+  padding-top: 6px;
+  font-size:16px;
+  line-height:18px;
+  font-family: "open sans hebrew";
+  direction:rtl;
+  text-align:right;
+  color: #fff;
+}
+
+.slick-dots {
+  bottom: 0px;
+  margin-left: 0; /* Fixes the visible horizontal scroll bar */
+}
+.slick-slide {
+  margin: 0 12px;
+}
+/* the parent */
+.slick-list {
+  direction: ltr;
+  margin: 0 -12px;
+}

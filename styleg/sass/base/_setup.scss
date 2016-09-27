@@ -1,0 +1,50 @@
+// --- Global Namespace --- //
+$ns:  "inter_";
+
+
+// --- Color --- //
+
+$open-text-color: #fff;
+
+// --- Base Multiplier --- //
+$grid-base: 6 !global;
+$font-base: 18 !global;
+$line-height-base: 1.5 !global;
+$cap-height: 0.78 !global;
+$default-size-unit:'rem' !global;
+
+$spaces :(
+        xtight: $grid-base,
+        tight: $grid-base * 2,
+        comfort: $grid-base * 3,
+        loose: $grid-base * 4,
+        xloose: $grid-base * 5,
+);
+
+
+// --- Layout --- //
+
+// --- setup --- //
+
+$layout-tablet-padding: 24px;
+$layout-mobile-padding: 12px;
+$layout-max-width: 80rem;
+$layout-left-col-width: 20rem;
+$layout-right-col-width: 20rem;
+$layout-col-gutter: 1rem;
+$layout-row-padding: 1rem;
+
+// --- breakpoints --- //
+
+$bp : (
+  media-t: 600px,
+  media-s: 768px,
+  media-m: 1280px,
+  media-l: 1440px
+);
+
+$z-index-top: 99999;
+$z-index-col: 20;
+$z-index-video-html5: 30;
+$z-index-bar: 1;
+

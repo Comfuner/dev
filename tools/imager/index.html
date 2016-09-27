@@ -1,0 +1,179 @@
+<!--██╗  ██╗ █████╗  █████╗ ██████╗ ███████╗████████╗███████╗-->
+<!--██║  ██║██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝╚══███╔╝-->
+<!--███████║███████║███████║██████╔╝█████╗     ██║     ███╔╝-->
+<!--██╔══██║██╔══██║██╔══██║██╔══██╗██╔══╝     ██║    ███╔╝-->
+<!--██║  ██║██║  ██║██║  ██║██║  ██║███████╗   ██║   ███████╗-->
+<!--╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝-->
+
+<!--██╗███╗   ██╗████████╗███████╗██████╗  █████╗  ██████╗████████╗██╗██╗   ██╗███████╗██╗-->
+<!--██║████╗  ██║╚══██╔══╝██╔════╝██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██║██║   ██║██╔════╝██║-->
+<!--██║██╔██╗ ██║   ██║   █████╗  ██████╔╝███████║██║        ██║   ██║██║   ██║█████╗  ██║-->
+<!--██║██║╚██╗██║   ██║   ██╔══╝  ██╔══██╗██╔══██║██║        ██║   ██║╚██╗ ██╔╝██╔══╝  ╚═╝-->
+<!--██║██║ ╚████║   ██║   ███████╗██║  ██║██║  ██║╚██████╗   ██║   ██║ ╚████╔╝ ███████╗██╗-->
+<!--╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝  ╚═══╝  ╚══════╝╚═╝-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Parser</title>
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <script src="http://www.haaretz.co.il/st/c/static/resources/js/jquery/jquery-2.1.4.min.js"></script>
+    <style>
+        body {font-family: 'slabo 27px'}
+        xmp {
+            white-space: pre-line;
+        }
+        #warn1 {
+            display:none;
+        }
+        #copyButton {
+            float:left;
+            color: white;
+            background: #6c94d5;
+            font-weight:700;
+            font-size:16px;
+            padding:4px;
+            position:relative;
+            width: 636px;
+        }
+        textarea {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size:14px;
+            width:600px;
+            height:400px;
+            overflow: auto;
+            padding:15px;
+            border: 3px solid #ccc;
+            background: #e8e8e8;
+        }
+    </style>
+</head>
+<body>
+<h1><strong>Interactive: </strong>Image Parser</h1>
+<label>Image ID (Polopoly): </label>
+<input id="imgval" type="text" name="img"/><label id="warn1" style="color:red;font-weight:700"> You need to enter an Image ID!</label><br/><br/>
+<label>Select A domain: </label>
+<select id="selector">
+    <option value="http://www.haaretz.co.il">Haaretz.co.il</option>
+    <option value="http://www.haaretz.com">Haaretz.com</option>
+    <option value="http://www.themarker.com">TheMarker.com</option>
+    <option value="http://">outer source</option>
+</select><br/><br/>
+<button type="submit" onclick="processImg()">Get the Code</button>
+<br/>
+<br/>
+
+<textarea id="textplace"></textarea>
+<br/>
+<button id="copyButton">copy text</button>
+
+<script>
+
+    var xData;
+    var processImg = function(){
+
+        var imgval = $('#imgval').val(),
+            imgsrc = $('#selector').val(),
+            polopath = [];
+
+        if (imgval == "") { $("#warn1").show()} else {$("#warn1").hide()}
+            var result = $.getJSON( imgsrc + "/json/cmlink/" + imgval, function(data){
+                xData = data;
+                var getT = [
+                    {"deriv":"original","resp":""},
+                    {"deriv":"size_468xAuto","resp":"468w"},
+                    {"deriv":"size_640xAuto","resp":"600w"},
+                    {"deriv":"size_748xAuto","resp":"768w"},
+                    {"deriv":"size_936xAuto","resp":"1024w"},
+                    {"deriv":"size_1496xAuto","resp":"1280w"}
+                ];
+
+                function parseSourceSet(){
+                    var str = "";
+                    getT.forEach(function(set){
+                        console.log(xData.path);
+                        console.log(set.deriv);
+                        var tempStr = xData.path;
+                        if (set.deriv == "original") {
+                            //
+                        } else {
+                            tempStr = xData.path.replace("landscape_102", set.deriv);
+                            str += imgsrc + tempStr + " " + set.resp + ", ";
+                        }
+                        console.log(xData.path);
+                    });
+                    return str;
+                }
+
+                var codeStr = '' +
+                        '<img class="inter-img-w lazyload"' +
+                        ' data-sizes="auto"'+
+                        ' data-src="' + imgsrc + xData.path.substr(0,xData.path.indexOf("_gen")) + '"' +
+                        ' src="' + imgsrc + '/st/c/static/resources/img/thumb.gif"' +
+                        ' data-srcset="'+
+                            parseSourceSet() +
+                        '"/>' +
+                        '';
+
+                $("#textplace").html(codeStr);
+
+            });
+    }
+</script>
+<script>
+    document.getElementById("copyButton").addEventListener("click", function() {
+        copyToClipboard(document.getElementById("textplace"));
+    });
+    function copyToClipboard(elem) {
+        // create hidden text element, if it doesn't already exist
+        var targetId = "_hiddenCopyText_";
+        var isInput = elem.tagName === "INPUT" || elem.tagName === "TEXTAREA";
+        var origSelectionStart, origSelectionEnd;
+        if (isInput) {
+            // can just use the original source element for the selection and copy
+            target = elem;
+            origSelectionStart = elem.selectionStart;
+            origSelectionEnd = elem.selectionEnd;
+        } else {
+            // must use a temporary form element for the selection and copy
+            target = document.getElementById(targetId);
+            if (!target) {
+                var target = document.createElement("textarea");
+                target.style.position = "absolute";
+                target.style.left = "-9999px";
+                target.style.top = "0";
+                target.id = targetId;
+                document.body.appendChild(target);
+            }
+            target.textContent = elem.textContent;
+        }
+        // select the content
+        var currentFocus = document.activeElement;
+        target.focus();
+        target.setSelectionRange(0, target.value.length);
+
+        // copy the selection
+        var succeed;
+        try {
+            succeed = document.execCommand("copy");
+        } catch(e) {
+            succeed = false;
+        }
+        // restore original focus
+        if (currentFocus && typeof currentFocus.focus === "function") {
+            currentFocus.focus();
+        }
+
+        if (isInput) {
+            // restore prior selection
+            elem.setSelectionRange(origSelectionStart, origSelectionEnd);
+        } else {
+            // clear temporary content
+            target.textContent = "";
+        }
+        return succeed;
+    }
+</script>
+</body>
+</html>
