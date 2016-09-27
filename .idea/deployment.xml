@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="st.haaretz.co.il">
+  <component name="PublishConfigData" serverName="st.haaretz.co.il" uploadOnCheckin="e43aba7e-f19c-4cb9-8195-a1a6699ca2c5">
     <serverData>
       <paths name="st.haaretz.co.il">
         <serverdata>
@@ -13,5 +13,6 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="st.haaretz.co.il" />
   </component>
 </project>
