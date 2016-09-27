@@ -1,68 +1,526 @@
-/*
-Error: File to import not found or unreadable: ../../../bourbon/bourbon.
-       Load paths:
-         C:/projects/dev/elements/slicktemplate/sass
-         C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets
-         Compass::SpriteImporter
-        on line 21 of C:/projects/dev/elements/slicktemplate/sass/project_styles.scss
+/* -----------------------------------------------------------------
 
-16: $white: #fff;
-17: $black: #222;
-18: $grey: #8C8C8C;
-19: $grey-shadow: #ccc;
-20: $blue-line: #09A5D9;
-21: @import "../../../bourbon/bourbon";
-22: 
-23: .icon{
-24:   font-family: htzIcons !important;
-25:   font-weight: normal !important;
-26: }
+.element {
+  @include size(100px,100px);
+}
 
-Backtrace:
-C:/projects/dev/elements/slicktemplate/sass/project_styles.scss:21
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/import_node.rb:67:in `rescue in import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/import_node.rb:45:in `import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/import_node.rb:28:in `imported_file'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/import_node.rb:37:in `css_import?'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:157:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/engine.rb:378:in `_render_with_sourcemap'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/engine.rb:295:in `render_with_sourcemap'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-1.0.3/bin/compass:44:in `call'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
-C:/Ruby22-x64/bin/compass:23:in `load'
-C:/Ruby22-x64/bin/compass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: ../../../bourbon/bourbon.\A        Load paths:\A          C:/projects/dev/elements/slicktemplate/sass\A          C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets\A          Compass::SpriteImporter\A         on line 21 of C:/projects/dev/elements/slicktemplate/sass/project_styles.scss\A \A 16: $white: #fff;\A 17: $black: #222;\A 18: $grey: #8C8C8C;\A 19: $grey-shadow: #ccc;\A 20: $blue-line: #09A5D9;\A 21: @import \"../../../bourbon/bourbon\";\A 22: \A 23: .icon{\A 24:   font-family: htzIcons !important;\A 25:   font-weight: normal !important;\A 26: }"; }
+-------------------------------------------------------------------*/
+/* -----------------------------------------------------------------
+
+.element {
+  @include prefix((transform: translate(-50%, -50%)), webkit ms o moz);
+}
+
+-------------------------------------------------------------------*/
+/* -----------------------------------------------------------------
+
+.element {
+  @include clearfix();
+}
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+
+Grid
+
+------------------------------------------------------------------*/
+/* line 23, ../sass/project_styles.scss */
+.icon {
+  font-family: htzIcons !important;
+  font-weight: normal !important;
+}
+
+/* line 28, ../sass/project_styles.scss */
+.elijahu {
+  display: block;
+}
+
+/* line 34, ../sass/project_styles.scss */
+.arrow_box, .tooltipCont .tooltip {
+  position: relative;
+  background: #ffac00;
+  border: 2px solid #ffac00;
+}
+
+/* line 39, ../sass/project_styles.scss */
+.arrow_box:after, .tooltipCont .tooltip:after, .arrow_box:before, .tooltipCont .tooltip:before {
+  top: 50%;
+  right: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border: 2px solid #222;
+}
+
+/* line 51, ../sass/project_styles.scss */
+.arrow_box:after, .tooltipCont .tooltip:after {
+  border-color: rgba(255, 172, 0, 0);
+  border-right-color: #ffac00;
+  border-width: 12px;
+  margin-top: -12px;
+}
+
+/* line 57, ../sass/project_styles.scss */
+.arrow_box:before, .tooltipCont .tooltip:before {
+  border-color: rgba(255, 172, 0, 0);
+  border-right-color: #ffac00;
+  border-width: 15px;
+  margin-top: -15px;
+}
+
+/* line 65, ../sass/project_styles.scss */
+body {
+  background-color: #222d1d;
+  color: white;
+}
+
+/* line 69, ../sass/project_styles.scss */
+.chap {
+  margin-bottom: 24px;
+}
+
+/* line 72, ../sass/project_styles.scss */
+.regchap {
+  position: relative;
+  padding: 0 42rem;
+}
+@media (max-width: 600px) {
+  /* line 72, ../sass/project_styles.scss */
+  .regchap {
+    padding: 0 24px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  /* line 72, ../sass/project_styles.scss */
+  .regchap {
+    padding: 0 48px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* line 72, ../sass/project_styles.scss */
+  .regchap {
+    padding: 0 12rem;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1800px) {
+  /* line 72, ../sass/project_styles.scss */
+  .regchap {
+    padding: 0 24rem;
+  }
+}
+
+/* line 89, ../sass/project_styles.scss */
+.mainchap {
+  height: 100vh;
+  max-height: 100vh;
+  background-image: url("../images/open2.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-background-attachment: fixed;
+  -moz-background-attachment: fixed;
+  -ms-background-attachment: fixed;
+  -o-background-attachment: fixed;
+  background-attachment: fixed;
+  -webkit-background-position: center center;
+  -moz-background-position: center center;
+  -ms-background-position: center center;
+  -o-background-position: center center;
+  background-position: center center;
+}
+@media (max-width: 600px) {
+  /* line 89, ../sass/project_styles.scss */
+  .mainchap {
+    -webkit-background-attachment: unset;
+    -moz-background-attachment: unset;
+    -ms-background-attachment: unset;
+    -o-background-attachment: unset;
+    background-attachment: unset;
+  }
+}
+/* line 99, ../sass/project_styles.scss */
+.mainchap .mainchap_header {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  padding: 0 50px 50px 50px;
+}
+/* line 105, ../sass/project_styles.scss */
+.mainchap .mainchap_header .headline {
+  display: inline-block;
+  font-size: 72px;
+  line-height: 78px;
+  font-weight: 400;
+  padding: 12px;
+}
+@media screen and (max-width: 600px) {
+  /* line 105, ../sass/project_styles.scss */
+  .mainchap .mainchap_header .headline {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+}
+/* line 117, ../sass/project_styles.scss */
+.mainchap .mainchap_header .headline1 {
+  background-color: #ffac00;
+  color: #222;
+}
+/* line 121, ../sass/project_styles.scss */
+.mainchap .mainchap_header .headline2 {
+  background-color: white;
+  color: #222;
+}
+/* line 125, ../sass/project_styles.scss */
+.mainchap .mainchap_header p {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+/* line 131, ../sass/project_styles.scss */
+.mainchap .mainchap_header .goDown span {
+  margin-top: 24px;
+}
+/* line 133, ../sass/project_styles.scss */
+.mainchap .mainchap_header .goDown span a {
+  text-decoration: none;
+  font-family: htzIcons;
+  font-size: 36px;
+  color: #fff;
+  display: block;
+  margin-top: 12px;
+}
+
+/* line 145, ../sass/project_styles.scss */
+.centering, .creditShare {
+  width: 100%;
+  color: #fff;
+  padding: 12px;
+  margin: auto;
+}
+
+/* line 153, ../sass/project_styles.scss */
+.subhead {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+}
+
+/* line 158, ../sass/project_styles.scss */
+.creditShare {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+/* line 162, ../sass/project_styles.scss */
+.creditShare .credit {
+  float: right;
+}
+/* line 165, ../sass/project_styles.scss */
+.creditShare .inter-share {
+  float: left;
+}
+/* line 181, ../sass/_mixins.scss */
+.creditShare:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 169, ../sass/project_styles.scss */
+.creditShare a {
+  text-decoration: none;
+}
+/* line 171, ../sass/project_styles.scss */
+.creditShare a .author {
+  color: #fff;
+}
+/* line 173, ../sass/project_styles.scss */
+.creditShare a .author:hover {
+  border-bottom: 2px solid #ffac00;
+}
+
+/* line 181, ../sass/project_styles.scss */
+.inter-share button {
+  color: #fff;
+}
+/* line 183, ../sass/project_styles.scss */
+.inter-share button:hover {
+  opacity: 1;
+  color: #fff;
+}
+
+/* line 189, ../sass/project_styles.scss */
+#chap2 {
+  height: 1000px;
+}
+
+/* line 192, ../sass/project_styles.scss */
+.infoController {
+  color: white;
+}
+/* line 197, ../sass/project_styles.scss */
+.infoController .infoController_header {
+  font-weight: 700;
+  text-align: center;
+  background-color: #212121;
+  padding: 12px;
+}
+/* line 202, ../sass/project_styles.scss */
+.infoController .infoController_header span {
+  font-weight: 700;
+  font-size: 20px;
+}
+/* line 208, ../sass/project_styles.scss */
+.infoController .sides {
+  margin-top: 24px;
+}
+/* line 211, ../sass/project_styles.scss */
+.infoController .side {
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 2px solid #ffac00;
+  width: 48%;
+  float: left;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.25s;
+}
+/* line 222, ../sass/project_styles.scss */
+.infoController .side span {
+  font-weight: 700;
+  font-size: 14px;
+}
+/* line 226, ../sass/project_styles.scss */
+.infoController .side.selected {
+  background-color: #ffac00;
+  color: #212121;
+}
+/* line 232, ../sass/project_styles.scss */
+.infoController .side1 {
+  margin-right: 2%;
+}
+/* line 235, ../sass/project_styles.scss */
+.infoController .side2 {
+  margin-left: 2%;
+}
+/* line 238, ../sass/project_styles.scss */
+.infoController .infocounter {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 28px;
+}
+@media screen and (max-width: 600px) {
+  /* line 238, ../sass/project_styles.scss */
+  .infoController .infocounter {
+    margin-top: 12px;
+    font-size: 22px;
+  }
+}
+
+/* line 249, ../sass/project_styles.scss */
+span.small_line {
+  display: block;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+/* line 255, ../sass/project_styles.scss */
+.animationStage {
+  height: 100%;
+  direction: ltr;
+  overflow: hidden;
+  margin-top: 24px;
+}
+
+/* line 261, ../sass/project_styles.scss */
+.infoheader {
+  text-align: right;
+  font-size: 20px;
+}
+/* line 264, ../sass/project_styles.scss */
+.infoheader span:nth-child(1) {
+  font-weight: 700;
+  color: #ffac00;
+}
+
+/* line 270, ../sass/project_styles.scss */
+.sidenote {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  display: block;
+}
+
+/* line 276, ../sass/project_styles.scss */
+.barrier {
+  height: 200px;
+}
+
+/* line 279, ../sass/project_styles.scss */
+.pin {
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+}
+
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/* line 290, ../sass/project_styles.scss */
+footer {
+  font-family: "Open Sans Hebrew";
+  background: #323232;
+  border-top: 2px solid #09A5D9;
+  padding: 12px 5%;
+  color: white;
+  text-align: center;
+}
+/* line 298, ../sass/project_styles.scss */
+footer p {
+  margin: 0;
+  padding: 0 0 12px;
+}
+/* line 302, ../sass/project_styles.scss */
+footer a {
+  color: white;
+  text-decoration: none;
+}
+/* line 306, ../sass/project_styles.scss */
+footer .links a {
+  border-left: 1px solid white;
+  padding: 0 6px;
+  font-size: 14px;
+}
+/* line 310, ../sass/project_styles.scss */
+footer .links a:last-child {
+  border-left: 0px solid white;
+}
+/* line 314, ../sass/project_styles.scss */
+footer .logos a {
+  color: #09A5D9;
+  font-size: 36px;
+}
+/* line 318, ../sass/project_styles.scss */
+footer .logo {
+  color: #09A5D9;
+  font-size: 48px;
+}
+/* line 322, ../sass/project_styles.scss */
+footer .logos a {
+  padding: 6px;
+}
+/* line 325, ../sass/project_styles.scss */
+footer .rights {
+  border-top: 2px solid #09A5D9;
+  padding-top: 12px;
+  font-size: 14px;
+}
+
+/* line 332, ../sass/project_styles.scss */
+.divider {
+  margin: 24px 0 96px 0;
+  height: 2px;
+  background: #8c8c8c;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1400px) {
+  /* line 340, ../sass/project_styles.scss */
+  .videoblow {
+    max-width: 65rem !important;
+  }
+}
+/* line 345, ../sass/project_styles.scss */
+ul, menu, dir {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+}
+
+/* line 355, ../sass/project_styles.scss */
+.tooltipCont {
+  position: relative;
+  display: block;
+  float: left;
+}
+@media screen and (max-width: 950px) {
+  /* line 355, ../sass/project_styles.scss */
+  .tooltipCont {
+    display: none;
+  }
+}
+/* line 362, ../sass/project_styles.scss */
+.tooltipCont .tooltip {
+  opacity: 1;
+  display: block;
+  color: #222;
+  background-color: #ffac00;
+  margin: 0;
+  padding: 6px;
+  position: absolute;
+  width: 200px;
+  text-align: center;
+  z-index: 0;
+  animation-iteration-count: infinite;
+  transition: opacity .5s;
+}
+/* line 377, ../sass/project_styles.scss */
+.tooltipCont .tooltip.scroll {
+  -webkit-transform: translateX(-10px);
+  -moz-transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
+  -o-transform: translateX(-10px);
+  transform: translateX(-10px);
+  animation: tooltipHorizon 3s;
+  animation-iteration-count: infinite;
+}
+/* line 383, ../sass/project_styles.scss */
+.tooltipCont .tooltip.click {
+  -webkit-transform: translateX(-15px);
+  -moz-transform: translateX(-15px);
+  -ms-transform: translateX(-15px);
+  -o-transform: translateX(-15px);
+  transform: translateX(-15px);
+  animation: tooltipVertical 3s;
+  animation-iteration-count: infinite;
+}
+/* line 391, ../sass/project_styles.scss */
+.tooltipCont .tooltip.hide {
+  opacity: 0;
+}
+/* line 410, ../sass/project_styles.scss */
+.tooltipCont .tooltip:before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  position: absolute;
+}
+/* line 416, ../sass/project_styles.scss */
+.tooltipCont .tooltip.btn {
+  left: 30px;
+  top: -20px;
+}
+/* line 420, ../sass/project_styles.scss */
+.tooltipCont .tooltip.pic {
+  right: 275px;
+  bottom: -50px;
+}
+/* line 424, ../sass/project_styles.scss */
+.tooltipCont .tooltip.menu {
+  right: 30px;
+  top: -15px;
+}
+@media screen and (max-width: 768px) {
+  /* line 355, ../sass/project_styles.scss */
+  .tooltipCont {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=project_styles.css.map */
