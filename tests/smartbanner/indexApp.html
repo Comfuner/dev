@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Please upgrade to the latest version of Haaretz</title>
+    <!--<link rel="stylesheet" type="text/css" href="stylesheets/project_styles.css">-->
+
+    <style>
+        @import 'https://fonts.googleapis.com/css?family=Merriweather';
+        * {box-sizing: border-box}
+        body {
+            direction:ltr;
+            background-color: #fff;
+            color: #222;
+            margin: 0px;
+            font-family: "Merriweather", Georgia, "Times New Roman";
+            padding:0;
+            margin:0;
+        }
+
+        .inter-app-container {
+            direction: rtl;
+        }
+        .inter-app-container-bar {
+            background-color: #222;
+            /* height: 50px; */
+            text-align: center;
+            /* line-height: 50px; */
+            padding: 12px 24px;
+        }
+        .inter-app-container-bar span:nth-child(1) {
+            color: #fff;
+            font-size:18px;
+            font-weight:700;
+        }
+        .inter-app-container-bar span:nth-child(2) {
+            color: #4e7385;
+            font-size:18px;
+            font-weight:700;
+        }
+        .inter-app-container-body {
+            padding: 6px;
+        }
+
+        .inter-app-container-body * {
+            margin: 12px;
+        }
+
+        a .inter-app-container-image {
+            width: 100px;
+            height:auto;
+            margin:16px auto;
+        }
+
+        .inter-app-container-header {
+            direction:ltr;
+            font-size: 20px;
+        }
+
+        .inter-app-container-text {
+            direction:ltr;
+            font-size: 18px;
+            line-height:30px;
+        }
+
+        .inter-app-container-button {
+            background-color: #4e7385;
+            padding: 12px 18px;
+            border-radius: 6px;;
+            color: white;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .button-inter-app-container {
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="inter-app-container">
+    <div class="inter-app-container-bar">
+        <span>Please upgrade to the latest version of Haaretz</span>
+    </div>
+    <div class="inter-app-container-body">
+        <a style="display:block;text-align:center" id="linker" href="#">
+            <img class="inter-app-container-image" src="http://www.haaretz.com/st/c/static/resources/img/logos/English-512.jpg" alt="">
+        </a>
+        <h1 class="inter-app-container-header">Dear Reader,</h1>
+        <p class="inter-app-container-text">For the latest news and analysis from Israel and the Middle East, please download the latest version of Haaretz
+        </p>
+        <!--<p style="direction:ltr;">-->
+            <!--*Iphone users, please uninstall the old version after upgrading.-->
+        <!--</p>-->
+        <div class="button-inter-app-container">
+        <a id="linker1"class="inter-app-container-button" href="">Upgrade</a>
+        </div>
+    </div>
+</div>
+<script src="js/isMobile.min.js"></script>
+<script>
+
+    if (isMobile.apple.device) {
+        document.getElementById('linker').setAttribute('href','http://bit.ly/AakH5W');
+        document.getElementById('linker1').setAttribute('href','http://bit.ly/AakH5W');
+    } else if (isMobile.android.device) {
+        document.getElementById('linker').setAttribute('href','https://play.google.com/store/apps/details?id=com.opentech.haaretz')
+        document.getElementById('linker1').setAttribute('href','https://play.google.com/store/apps/details?id=com.opentech.haaretz')
+    } else {
+        document.getElementById('linker').setAttribute('href','http://www.haaretz.com');
+        document.getElementById('linker1').setAttribute('href','http://www.haaretz.com');
+    }
+</script>
+</body>
+</html>
