@@ -13,6 +13,37 @@
 <script src="http://www.haaretz.co.il/st/c/static/resources/js/xl/xl.min.300415.js"></script>
 <script src="js/main.js"></script>
 <script>
+    $('.slick').slick({
+        lazyLoad: 'ondemand',
+        initialSlide: 0,
+        slidesToShow: 3,
+        rtl: false,
+        //infinite: true,
+        //mobilefirst: true,
+        //variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }]
+    });
 </script>
 </body>
 </html>

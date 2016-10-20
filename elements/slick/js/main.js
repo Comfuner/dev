@@ -40,7 +40,11 @@ function dataReady(data){
         caroDiv.setAttribute('id',tempCaroId);
         caroDiv.setAttribute('class','slick fullwidth');
         var tempCaroStr = buildCarousel(data[caroArr]);
+
+        console.log(caroHead);
+        console.log(tempCaroStr);
         caroDiv.innerHTML = tempCaroStr;
+
         $('body').append(caroHead);
         $('body').append(caroDiv);
     }

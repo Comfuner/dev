@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>-->
+    <title>Title</title>
+</head>
+<body>
+<style>
+    /* Slider */
+    /* line 2, ../sass/_slick.scss */
+    .slick-slider {
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -ms-touch-action: pan-y;
+        touch-action: pan-y;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* line 16, ../sass/_slick.scss */
+    .slick-list {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    /* line 23, ../sass/_slick.scss */
+    .slick-list:focus {
+        outline: none;
+    }
+    /* line 27, ../sass/_slick.scss */
+    .slick-list.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+
+    /* line 32, ../sass/_slick.scss */
+    .slick-slider .slick-track,
+    .slick-slider .slick-list {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    /* line 41, ../sass/_slick.scss */
+    .slick-track {
+        position: relative;
+        left: 0;
+        top: 0;
+        display: block;
+    }
+    /* line 47, ../sass/_slick.scss */
+    .slick-track:before, .slick-track:after {
+        content: "";
+        display: table;
+    }
+    /* line 53, ../sass/_slick.scss */
+    .slick-track:after {
+        clear: both;
+    }
+    /* line 57, ../sass/_slick.scss */
+    .slick-loading .slick-track {
+        visibility: hidden;
+    }
+
+    /* line 61, ../sass/_slick.scss */
+    .slick-slide {
+        float: left;
+        height: 100%;
+        min-height: 1px;
+        display: none;
+    }
+    /* line 65, ../sass/_slick.scss */
+    [dir="rtl"] .slick-slide {
+        float: right;
+    }
+    /* line 68, ../sass/_slick.scss */
+    .slick-slide img {
+        display: block;
+    }
+    /* line 71, ../sass/_slick.scss */
+    .slick-slide.slick-loading img {
+        display: none;
+    }
+    /* line 77, ../sass/_slick.scss */
+    .slick-slide.dragging img {
+        pointer-events: none;
+    }
+    /* line 81, ../sass/_slick.scss */
+    .slick-initialized .slick-slide {
+        display: block;
+    }
+    /* line 85, ../sass/_slick.scss */
+    .slick-loading .slick-slide {
+        visibility: hidden;
+    }
+    /* line 89, ../sass/_slick.scss */
+    .slick-vertical .slick-slide {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+
+    /* line 95, ../sass/_slick.scss */
+    .slick-arrow.slick-hidden {
+        display: none;
+    }
+
+    /* Slider */
+    /* line 46, ../sass/_slick-theme.scss */
+    .slick-loading .slick-list {
+        background: #fff url('/images/ajax-loader.gif') center center no-repeat;
+    }
+
+    /* Icons */
+    @font-face {
+        font-family: "slick";
+        src: url(http://www.themarker.com/st/c/static/resources/fonts/slick/slick.eot);
+        src: url(http://www.themarker.com/st/c/static/resources/fonts/slick/slick.eot?#iefix) format("embedded-opentype"), url(http://www.themarker.com/st/c/static/resources/fonts/slick/slick.woff) format("woff"), url(http://www.themarker.com/st/c/static/resources/fonts/slick/slick.ttf) format("truetype"), url(http://www.themarker.com/st/c/static/resources/fonts/slick/slick.svg#slick) format("svg");
+        font-weight: normal;
+        font-style: normal;
+    }
+    /* Arrows */
+    /* line 64, ../sass/_slick-theme.scss */
+    .slick-prev,
+    .slick-next {
+        z-index: 100;
+        position: absolute;
+        display: block;
+        background-color: black;
+        height: 36px;
+        width: 36px;
+        line-height: 0px;
+        font-size: 0px;
+        cursor: pointer;
+        background: transparent;
+        color: transparent;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        padding: 0;
+        border: none;
+        outline: none;
+    }
+    /* line 84, ../sass/_slick-theme.scss */
+    .slick-prev:hover, .slick-prev:focus,
+    .slick-next:hover,
+    .slick-next:focus {
+        outline: none;
+        background: transparent;
+        color: transparent;
+    }
+    /* line 88, ../sass/_slick-theme.scss */
+    .slick-prev:hover:before, .slick-prev:focus:before,
+    .slick-next:hover:before,
+    .slick-next:focus:before {
+        opacity: 1;
+    }
+    /* line 92, ../sass/_slick-theme.scss */
+    .slick-prev.slick-disabled:before,
+    .slick-next.slick-disabled:before {
+        opacity: 0.25;
+    }
+    /* line 95, ../sass/_slick-theme.scss */
+    .slick-prev:before,
+    .slick-next:before {
+        font-family: "slick";
+        font-size: 36px;
+        line-height: 1;
+        color: #222;
+        opacity: 0.25;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* line 106, ../sass/_slick-theme.scss */
+    .slick-prev {
+        left: -48px;
+    }
+    /* line 108, ../sass/_slick-theme.scss */
+    [dir="rtl"] .slick-prev {
+        left: auto;
+        right: -36px;
+    }
+    /* line 112, ../sass/_slick-theme.scss */
+    .slick-prev:before {
+        content: "←";
+    }
+    /* line 114, ../sass/_slick-theme.scss */
+    [dir="rtl"] .slick-prev:before {
+        content: "→";
+    }
+
+    /* line 120, ../sass/_slick-theme.scss */
+    .slick-next {
+        right: -48px;
+    }
+    /* line 122, ../sass/_slick-theme.scss */
+    [dir="rtl"] .slick-next {
+        left: -36px;
+        right: auto;
+    }
+    /* line 126, ../sass/_slick-theme.scss */
+    .slick-next:before {
+        content: "→";
+    }
+    /* line 128, ../sass/_slick-theme.scss */
+    [dir="rtl"] .slick-next:before {
+        content: "←";
+    }
+
+    /* Dots */
+    /* line 136, ../sass/_slick-theme.scss */
+    .slick-dotted.slick-slider {
+        margin-bottom: 30px;
+    }
+
+    /* line 140, ../sass/_slick-theme.scss */
+    .slick-dots {
+        position: absolute;
+        bottom: -25px;
+        list-style: none;
+        display: block;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    /* line 149, ../sass/_slick-theme.scss */
+    .slick-dots li {
+        position: relative;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+    }
+    /* line 157, ../sass/_slick-theme.scss */
+    .slick-dots li button {
+        border: 0;
+        background: transparent;
+        display: block;
+        height: 20px;
+        width: 20px;
+        outline: none;
+        line-height: 0px;
+        font-size: 0px;
+        color: transparent;
+        padding: 5px;
+        cursor: pointer;
+    }
+    /* line 169, ../sass/_slick-theme.scss */
+    .slick-dots li button:hover, .slick-dots li button:focus {
+        outline: none;
+    }
+    /* line 171, ../sass/_slick-theme.scss */
+    .slick-dots li button:hover:before, .slick-dots li button:focus:before {
+        opacity: 1;
+    }
+    /* line 175, ../sass/_slick-theme.scss */
+    .slick-dots li button:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "•";
+        width: 20px;
+        height: 20px;
+        font-family: "slick";
+        font-size: 6px;
+        line-height: 20px;
+        text-align: center;
+        color: white;
+        opacity: 0.25;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    /* line 192, ../sass/_slick-theme.scss */
+    .slick-dots li.slick-active button:before {
+        color: white;
+        opacity: 0.25;
+    }
+
+    /* line 1, ../sass/_slick-adjust.scss */
+    .slick {
+        direction: ltr;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    /* line 12, ../sass/_slick-adjust.scss */
+    .inter_caro_item a {
+        text-decoration: none;
+        display: block;
+    }
+    /* line 16, ../sass/_slick-adjust.scss */
+    .inter_caro_item img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* line 21, ../sass/_slick-adjust.scss */
+    .inter_caro_desc {
+        padding-top: 6px;
+        font-size: 16px;
+        line-height: 18px;
+        font-family: "open sans hebrew";
+        direction: rtl;
+        text-align: right;
+        color: #222;
+    }
+
+    /* line 31, ../sass/_slick-adjust.scss */
+    .slick-dots {
+        bottom: 0px;
+        margin-left: 0;
+        /* Fixes the visible horizontal scroll bar */
+    }
+
+    /* line 35, ../sass/_slick-adjust.scss */
+    .slick-slide {
+        margin: 0 12px;
+    }
+
+    /* the parent */
+    /* line 39, ../sass/_slick-adjust.scss */
+    .slick-list {
+        direction: ltr;
+        margin: 0 -12px;
+    }
+
+    /*# sourceMappingURL=styles.css.map */
+
+</style>
+<div id="caro-c2" class="slick fullwidth">
+    <div class='inter_caro_item'><a href='http://www.themarker.com/news/macro/1.3085437'> <img
+            class='inter_caro_item_img' src='http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif'
+            data-lazy='http://www.themarker.com/polopoly_fs/1.3084125.1475155222!/image/20955914.jpg_gen/derivatives/size_468xAuto/20955914.jpg'>
+        <div class='inter_caro_desc'><span>מי משגיח על יוקר מחיה: על מונופול הכשרות והדרך להתמודד אתו | אורה קורן</span>
+        </div>
+    </a></div>
+    <div class='inter_caro_item'><a href='http://www.themarker.com/news/1.3084599'> <img class='inter_caro_item_img'
+                                                                                         src='http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif'
+                                                                                         data-lazy='http://www.themarker.com/polopoly_fs/1.3084130.1475155258!/image/469433250.jpg_gen/derivatives/size_468xAuto/469433250.jpg'>
+        <div class='inter_caro_desc'><span>עוצמים עין: באיזו מידה נאכף איסור פתיחת העסקים בשבת? | עדי דברת-מזריץ</span>
+        </div>
+    </a></div>
+    <div class='inter_caro_item'><a href='http://www.themarker.com/news/1.3084567'> <img class='inter_caro_item_img'
+                                                                                         src='http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif'
+                                                                                         data-lazy='http://www.themarker.com/polopoly_fs/1.3084132.1475339555!/image/7009224.jpg_gen/derivatives/size_468xAuto/7009224.jpg'>
+        <div class='inter_caro_desc'><span>האוטובוס נשאר בתחנה: אם אין לכם רכב פרטי, תמשיכו להעביר את היום החופשי בבית | אורן דורי</span>
+        </div>
+    </a></div>
+    <div class='inter_caro_item'><a href='http://www.themarker.com/news/1.3084605'> <img class='inter_caro_item_img'
+                                                                                         src='http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif'
+                                                                                         data-lazy='http://www.themarker.com/polopoly_fs/1.3084128.1475155239!/image/3473774345.jpg_gen/derivatives/size_468xAuto/3473774345.jpg'>
+        <div class='inter_caro_desc'><span>קרב לא לו: צה"ל נקלע לקו האש בין השקפות העולם השונות - ומנסה לרצות את כולם | גילי כהן</span>
+        </div>
+    </a></div>
+    <div class='inter_caro_item'><a href='http://www.themarker.com/news/1.3085573'> <img class='inter_caro_item_img'
+                                                                                         src='http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif'
+                                                                                         data-lazy='http://www.themarker.com/polopoly_fs/1.3084123.1475155205!/image/3330478464.jpg_gen/derivatives/size_468xAuto/3330478464.jpg'>
+        <div class='inter_caro_desc'><span>כשר אבל מסריח: ההשגחה הזאת עולה לנו הרבה יותר משאנו חושבים | שוקי שדה</span>
+        </div>
+    </a></div>
+    <div class='inter_caro_item'><a href='http://www.themarker.com/news/1.3084638'> <img class='inter_caro_item_img'
+                                                                                         src='http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif'
+                                                                                         data-lazy='http://www.themarker.com/polopoly_fs/1.3084126.1475155231!/image/3304810729.jpg_gen/derivatives/size_468xAuto/3304810729.jpg'>
+        <div class='inter_caro_desc'><span>"ממתי עבודות רכבת זה עניין של רבנים?" | רותם שטרקמן ונתי טוקר</span></div>
+    </a></div>
+    <div class='inter_caro_item'><a href='http://www.themarker.com/news/1.3084612'> <img class='inter_caro_item_img'
+                                                                                         src='http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif'
+                                                                                         data-lazy='http://www.themarker.com/polopoly_fs/1.3084127.1475155236!/image/2483503650.jpg_gen/derivatives/size_468xAuto/2483503650.jpg'>
+        <div class='inter_caro_desc'>
+            <span>כבר לא מקובלים: האם החצרות שאירחו את שועי הארץ יהפכו שוממות? | נתי טוקר</span></div>
+    </a></div>
+    <div class='inter_caro_item'><a href='http://www.themarker.com/news/1.3084021'> <img class='inter_caro_item_img'
+                                                                                         src='http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif'
+                                                                                         data-lazy='http://www.themarker.com/polopoly_fs/1.3084124.1475155210!/image/2593194510.jpg_gen/derivatives/size_468xAuto/2593194510.jpg'>
+        <div class='inter_caro_desc'><span>הרבנות הראשית עדיין נהנית מסמכויות נרחבות - אבל הלגיטימציה שלה נפגעה | יאיר אטינגר
+</span></div>
+    </a></div>
+    <div class='inter_caro_item'><a href='http://www.themarker.com/news/1.3083984'> <img class='inter_caro_item_img'
+                                                                                         src='http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif'
+                                                                                         data-lazy='http://www.themarker.com/polopoly_fs/1.3084133.1475155280!/image/3772454316.jpg_gen/derivatives/size_468xAuto/3772454316.jpg'>
+        <div class='inter_caro_desc'><span>איך הרומן של המלך הנרי משפיע על האנושות כיום? | דפנה מאור
+</span></div>
+    </a></div>
+    <div class='inter_caro_item'><a href='http://www.themarker.com/news/1.3084552'> <img class='inter_caro_item_img'
+                                                                                         src='http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif'
+                                                                                         data-lazy='http://www.themarker.com/polopoly_fs/1.3084129.1475155247!/image/2033595475.jpg_gen/derivatives/size_468xAuto/2033595475.jpg'>
+        <div class='inter_caro_desc'><span>ברוך השם, תודה לאל: למה חזרנו להיות דתיים? | ירון כהן צמח</span></div>
+    </a></div>
+    <div class='inter_caro_item'><a href='http://www.themarker.com/news/1.3084568'> <img class='inter_caro_item_img'
+                                                                                         src='http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif'
+                                                                                         data-lazy='http://www.themarker.com/polopoly_fs/1.3084122.1475155194!/image/1201611033.jpg_gen/derivatives/size_468xAuto/1201611033.jpg'>
+        <div class='inter_caro_desc'><span>רבי עקיבא פינת רוטשילד: כך מצטרפים החרדים לאחד המקצועות הנחשקים במשק | רותי לוי
+</span></div>
+    </a></div>
+    <div class='inter_caro_item'><a href='http://www.themarker.com/news/1.3084010'> <img class='inter_caro_item_img'
+                                                                                         src='http://www.haaretz.co.il/st/c/static/resources/img/thumb.gif'
+                                                                                         data-lazy='http://www.themarker.com/polopoly_fs/1.3084164.1475158887!/image/2533713312.jpg_gen/derivatives/size_468xAuto/2533713312.jpg'>
+        <div class='inter_caro_desc'><span>גאדג'ט של שבת: כשהמאה העשרים ואחת מחלחלת למאה שערים | רפאלה גויכמן
+</span></div>
+    </a></div>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
+<script src="http://www.haaretz.co.il/st/c/static/resources/js/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+    $('.slick').slick({
+        lazyLoad: 'ondemand',
+        initialSlide: 0,
+        slidesToShow: 5,
+        rtl: false,
+        //infinite: true,
+        //mobilefirst: true,
+        //variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }]
+    });
+    });
+</script>
+</body>
+</html>
