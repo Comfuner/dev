@@ -24,6 +24,12 @@
      /build -->
 </head>
 <body>
+<div class="fullscreen-bg">
+    <video loop muted autoplay class="fullscreen-bg__video">
+        <source src="vide/mp4.mp4" type="video/mp4">
+        <source src="vid/webm.webm" type="video/webm">
+    </video>
+</div>
 <!-- Facebook init -->
 <script>
     window.fbAsyncInit = function () {
@@ -61,7 +67,7 @@
         </div>
     </a>
     <div class="inter-bar_shares" s-header="header" s-text="text" s-desc="desc"
-         s-img="http://lorempixel.com/1920/1080/abstract/1" s-link="http://www.themarker.com">
+         s-img="" s-link="http://www.themarker.com">
         <button class="inter-f" s-type="main">f</button>
         <button class="inter-t" s-type="main">t</button>
     </div>
@@ -71,15 +77,21 @@
     <div id="chap0" class="chapter">
         <div class="inter-row flush">
             <div id="item5" class="op"
-                 style="background-image:url(http://www.haaretz.co.il/polopoly_fs/1.3097296.1476786000!/image/648593241.jpg)">
+                 style="background-image:url(https://unsplash.it/1920/1080?image=1031)">
                 <div class="opAbsCont">
                     <div class="opCont">
-                        <div class="opHead">רעידת האדמה של הפינטק</div>
-                        <a class="scrollease off50" href="#">E</a></div>
+                        <div class="opHead" style="color:#fff">רעידת האדמה של הפינטק</div>
+                        <div class="opSubhead" style="color:#fff">כותרת משנה פרויקט מיוחד</div>
+                        <a class="scrollease off50" href="#">
+                            <div  style="color:#fff" id="chevron"></div>
+                        </a></div>
                 </div>
             </div>
             <div class="open-inter-caption"><span></span><span>צילום: </span></div>
         </div>
+        </div>
+    <div id="chapA" class="chapter">
+
         <div class="inter-row regular">
             <p id="mo" class="tm cntr">
                 לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית להאמית קרהשק סכעיט דז מא, מנכם למטכין נשואי
@@ -106,75 +118,437 @@
 
         </div>
         <div class="inter-row full">
-           <div class="gg">
-               <div class="x12of12 l12of12 m12of12 s12of12 t12of12">
-                        <div id="graph1" class="graph open-graph"></div>
+            <div class="gg graphs">
+                <div class="x12of12 l12of12 m12of12 s12of12 t12of12 open-graph">
+                    <h2>כותרת הגרף</h2>
+                    <p>
+                        צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. נולום ארווס סאפיאן - פוסיליס
+                        קוויס, אקווזמן קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק - וענוף
+                        סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם גדדיש.
+                        קוויז דומור ליאמום בלינך רוגצה. לפמעט מוסן מנת. גולר מונפרר סוברט לורם שבצק יהול, לכנוץ
+                        בעריר גק ליץ, ושבעגט ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו סתשם
+                        השמה - לתכי מורגם בורק? לתיג ישבעס.
+                    </p>
+                    <div id="graph1" class="graph"></div>
                 </div>
-            <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
-                <div id="graph2" class="graph"></div>
-           </div>
-               <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
-                   <div id="graph3" class="graph"></div>
-               </div>
-           </div>
+                <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
+                    <h2>כותרת הגרף</h2>
+                    <p>
+                        צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. נולום ארווס סאפיאן - פוסיליס
+                        קוויס, אקווזמן קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק - וענוף
+                        סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם גדדיש.
+                        קוויז דומור ליאמום בלינך רוגצה. לפמעט מוסן מנת. גולר מונפרר סוברט לורם שבצק יהול, לכנוץ
+                        בעריר גק ליץ, ושבעגט ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו סתשם
+                        השמה - לתכי מורגם בורק? לתיג ישבעס.
+                    </p>
+                    <div id="graph2" class="graph"></div>
+                </div>
+                <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
+                    <h2>כותרת הגרף</h2>
+                    <p>
+                        צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. נולום ארווס סאפיאן - פוסיליס
+                        קוויס, אקווזמן קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק - וענוף
+                        סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם גדדיש.
+                        קוויז דומור ליאמום בלינך רוגצה. לפמעט מוסן מנת. גולר מונפרר סוברט לורם שבצק יהול, לכנוץ
+                        בעריר גק ליץ, ושבעגט ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו סתשם
+                        השמה - לתכי מורגם בורק? לתיג ישבעס.
+                    </p>
+                    <div id="graph3" class="graph"></div>
+                </div>
+            </div>
+        </div> <!-- end of chap 0 -->
+        <div class="inter-row-full featuresheadline">
+            <h1>כותרת פיצ'רים</h1>
         </div>
-    </div> <!-- end of chap 0 -->
-
+        <div class="chapter" id="chap1">
+            <div class="inter-row full featureslist">
+                <div class="gg">
+                    <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
+                        <div class="feature">
+                            <h2>כותרת פיצ'ר</h2>
+                            <img class="inter-img-w"
+                                 src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
+                            <p>
+                                צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. נולום ארווס סאפיאן - פוסיליס
+                                קוויס, אקווזמן קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק -
+                                וענוף
+                                סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם
+                                גדדיש.
+                                קוויז דומור ליאמום בלינך רוגצה. לפמעט מוסן מנת. גולר מונפרר סוברט לורם שבצק יהול, לכנוץ
+                                בעריר גק ליץ, ושבעגט ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו
+                                סתשם
+                                השמה - לתכי מורגם בורק? לתיג ישבעס.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
+                        <div class="feature">
+                            <h2>כותרת פיצ'ר</h2>
+                            <img class="inter-img-w"
+                                 src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
+                            <p>
+                                צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. נולום ארווס סאפיאן - פוסיליס
+                                קוויס, אקווזמן קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק -
+                                וענוף
+                                סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם
+                                גדדיש.
+                                קוויז דומור ליאמום בלינך רוגצה. לפמעט מוסן מנת. גולר מונפרר סוברט לורם שבצק יהול, לכנוץ
+                                בעריר גק ליץ, ושבעגט ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו
+                                סתשם
+                                השמה - לתכי מורגם בורק? לתיג ישבעס.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
+                        <div class="feature">
+                            <h2>כותרת פיצ'ר</h2>
+                            <img class="inter-img-w"
+                                 src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
+                            <p>
+                                צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. נולום ארווס סאפיאן - פוסיליס
+                                קוויס, אקווזמן קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק -
+                                וענוף
+                                סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם
+                                גדדיש.
+                                קוויז דומור ליאמום בלינך רוגצה. לפמעט מוסן מנת. גולר מונפרר סוברט לורם שבצק יהול, לכנוץ
+                                בעריר גק ליץ, ושבעגט ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו
+                                סתשם
+                                השמה - לתכי מורגם בורק? לתיג ישבעס.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
+                        <div class="feature">
+                            <h2>כותרת פיצ'ר</h2>
+                            <img class="inter-img-w"
+                                 src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
+                            <p>
+                                צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. נולום ארווס סאפיאן - פוסיליס
+                                קוויס, אקווזמן קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק -
+                                וענוף
+                                סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם
+                                גדדיש.
+                                קוויז דומור ליאמום בלינך רוגצה. לפמעט מוסן מנת. גולר מונפרר סוברט לורם שבצק יהול, לכנוץ
+                                בעריר גק ליץ, ושבעגט ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו
+                                סתשם
+                                השמה - לתכי מורגם בורק? לתיג ישבעס.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
+                        <div class="feature">
+                            <h2>כותרת פיצ'ר</h2>
+                            <img class="inter-img-w"
+                                 src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
+                            <p>
+                                צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. נולום ארווס סאפיאן - פוסיליס
+                                קוויס, אקווזמן קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק -
+                                וענוף
+                                סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם
+                                גדדיש.
+                                קוויז דומור ליאמום בלינך רוגצה. לפמעט מוסן מנת. גולר מונפרר סוברט לורם שבצק יהול, לכנוץ
+                                בעריר גק ליץ, ושבעגט ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו
+                                סתשם
+                                השמה - לתכי מורגם בורק? לתיג ישבעס.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
+                        <div class="feature">
+                            <h2>כותרת פיצ'ר</h2>
+                            <img class="inter-img-w"
+                                 src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
+                            <p>
+                                צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. נולום ארווס סאפיאן - פוסיליס
+                                קוויס, אקווזמן קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק -
+                                וענוף
+                                סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם
+                                גדדיש.
+                                קוויז דומור ליאמום בלינך רוגצה. לפמעט מוסן מנת. גולר מונפרר סוברט לורם שבצק יהול, לכנוץ
+                                בעריר גק ליץ, ושבעגט ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו
+                                סתשם
+                                השמה - לתכי מורגם בורק? לתיג ישבעס.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
+                        <div class="feature">
+                            <h2>כותרת פיצ'ר</h2>
+                            <img class="inter-img-w"
+                                 src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
+                            <p>
+                                צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. נולום ארווס סאפיאן - פוסיליס
+                                קוויס, אקווזמן קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק -
+                                וענוף
+                                סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם
+                                גדדיש.
+                                קוויז דומור ליאמום בלינך רוגצה. לפמעט מוסן מנת. גולר מונפרר סוברט לורם שבצק יהול, לכנוץ
+                                בעריר גק ליץ, ושבעגט ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו
+                                סתשם
+                                השמה - לתכי מורגם בורק? לתיג ישבעס.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
+                        <div class="feature">
+                            <h2>כותרת פיצ'ר</h2>
+                            <img class="inter-img-w"
+                                 src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
+                            <p>
+                                צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. נולום ארווס סאפיאן - פוסיליס
+                                קוויס, אקווזמן קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק -
+                                וענוף
+                                סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם
+                                גדדיש.
+                                קוויז דומור ליאמום בלינך רוגצה. לפמעט מוסן מנת. גולר מונפרר סוברט לורם שבצק יהול, לכנוץ
+                                בעריר גק ליץ, ושבעגט ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו
+                                סתשם
+                                השמה - לתכי מורגם בורק? לתיג ישבעס.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
+                        <div class="feature">
+                            <h2>כותרת פיצ'ר</h2>
+                            <img class="inter-img-w"
+                                 src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
+                            <p>
+                                צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. נולום ארווס סאפיאן - פוסיליס
+                                קוויס, אקווזמן קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק -
+                                וענוף
+                                סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם
+                                גדדיש.
+                                קוויז דומור ליאמום בלינך רוגצה. לפמעט מוסן מנת. גולר מונפרר סוברט לורם שבצק יהול, לכנוץ
+                                בעריר גק ליץ, ושבעגט ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו
+                                סתשם
+                                השמה - לתכי מורגם בורק? לתיג ישבעס.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
+                        <div class="feature">
+                            <h2>כותרת פיצ'ר</h2>
+                            <img class="inter-img-w"
+                                 src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
+                            <p>
+                                צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. נולום ארווס סאפיאן - פוסיליס
+                                קוויס, אקווזמן קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק -
+                                וענוף
+                                סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם
+                                גדדיש.
+                                קוויז דומור ליאמום בלינך רוגצה. לפמעט מוסן מנת. גולר מונפרר סוברט לורם שבצק יהול, לכנוץ
+                                בעריר גק ליץ, ושבעגט ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו
+                                סתשם
+                                השמה - לתכי מורגם בורק? לתיג ישבעס.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
+                        <div class="feature">
+                            <h2>כותרת פיצ'ר</h2>
+                            <img class="inter-img-w"
+                                 src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
+                            <p>
+                                צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. נולום ארווס סאפיאן - פוסיליס
+                                קוויס, אקווזמן קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק -
+                                וענוף
+                                סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם
+                                גדדיש.
+                                קוויז דומור ליאמום בלינך רוגצה. לפמעט מוסן מנת. גולר מונפרר סוברט לורם שבצק יהול, לכנוץ
+                                בעריר גק ליץ, ושבעגט ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו
+                                סתשם
+                                השמה - לתכי מורגם בורק? לתיג ישבעס.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
+                        <div class="feature">
+                            <h2>כותרת פיצ'ר</h2>
+                            <img class="inter-img-w"
+                                 src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
+                            <p>
+                                צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. נולום ארווס סאפיאן - פוסיליס
+                                קוויס, אקווזמן קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק -
+                                וענוף
+                                סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם
+                                גדדיש.
+                                קוויז דומור ליאמום בלינך רוגצה. לפמעט מוסן מנת. גולר מונפרר סוברט לורם שבצק יהול, לכנוץ
+                                בעריר גק ליץ, ושבעגט ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו
+                                סתשם
+                                השמה - לתכי מורגם בורק? לתיג ישבעס.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inter-row-full featuresheadline">
+            <h1>כותרת חברות פינטק</h1>
+        </div>
+        <div class="chapter" id="chap2">
+            <div class="inter-row full">
+                <div class="companies">
+                    <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
+                        <a href="#vale">
+                        <div class="company">
+                            <div class="company_container">
+                                <img class="inter-img-w"
+                                     src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif">
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
+                        <div class="company">
+                            <div class="company_container">
+                                <span>שם חברה</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
+                        <div class="company">
+                            <div class="company_container">
+                                <img class="inter-img-w"
+                                     src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
+                        <div class="company">
+                            <div class="company_container">
+                                <img class="inter-img-w"
+                                     src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
+                        <div class="company">
+                            <div class="company_container">
+                                <img class="inter-img-w"
+                                     src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
+                        <div class="company">
+                            <div class="company_container">
+                                <span>שם חברה</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
+                        <div class="company">
+                            <div class="company_container">
+                                <img class="inter-img-w"
+                                     src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
+                        <div class="company">
+                            <div class="company_container">
+                                <img class="inter-img-w"
+                                     src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
+                        <div class="company">
+                            <div class="company_container">
+                                <img class="inter-img-w"
+                                     src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
+                        <div class="company">
+                            <div class="company_container">
+                                <span>שם חברה</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
+                        <div class="company">
+                            <div class="company_container">
+                                <img class="inter-img-w"
+                                     src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
+                        <div class="company">
+                            <div class="company_container">
+                                <img class="inter-img-w"
+                                     src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<!-- Main Element End -->
+<div id="vale" class="vale">
+    <div id="modal">
+        <a href="#close"><div class="closeVale">x</div></a>
+        <h1>מודאל</h1>
+    </div>
+</div>
 
-<script src="http://www.themarker.com/st/c/static/resources/js/jquery/jquery-2.1.4.min.js"></script>
-<script src="http://www.themarker.com/st/c/static/resources/js/highcharts/418/highcharts.js"></script>
-<!--<script src="http://www.themarker.com/st/c/static/resources/js/xl/xl.min.300415.js"></script>-->
-<script src="http://www.themarker.com/st/c/static/cdn/interext-311215.min.js"></script>
-<!--<script src="http://www.themarker.com/st/c/work/elijahu/engines/tests/bundle/2/mag_builder.js"></script>-->
-<script src="http://www.themarker.com/st/c/work/elijahu/engines/tests/bundle/2/bundle.js"></script>
-<!--<script src="js/main-mag.js"></script>-->
-<script src="js/theme.js"></script>
-<script src="js/main.js"></script>
+    <!-- Main Element End -->
 
-<!-- Analytics Tag Start -->
+    <script src="http://www.themarker.com/st/c/static/resources/js/jquery/jquery-2.1.4.min.js"></script>
+    <script src="http://www.themarker.com/st/c/static/resources/js/highcharts/418/highcharts.js"></script>
+    <!--<script src="http://www.themarker.com/st/c/static/resources/js/xl/xl.min.300415.js"></script>-->
+    <script src="http://www.themarker.com/st/c/static/cdn/interext-311215.min.js"></script>
+    <!--<script src="http://www.themarker.com/st/c/work/elijahu/engines/tests/bundle/2/mag_builder.js"></script>-->
+    <script src="http://www.themarker.com/st/c/work/elijahu/engines/tests/bundle/2/bundle.js"></script>
+    <!--<script src="js/main-mag.js"></script>-->
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
 
-<script>
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-3574867-1']);
-    _gaq.push(['_setDomainName', 'themarker.com']);
-    _gaq.push(['_trackPageview']);
+    <!-- Analytics Tag Start -->
 
-    (function () {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-    })();
-</script>
-<!-- Analytics Tag End -->
-<!-- Chartbeat Tag Start -->
-<script>
-    var _sf_async_config = {uid: 5952, domain: "themarker.com"};
-    (function () {
-        function loadChartbeat() {
-            window._sf_endpt = (new Date()).getTime();
-            var e = document.createElement('script');
-            e.setAttribute('language', 'javascript');
-            e.setAttribute('type', 'text/javascript');
-            e.setAttribute('src', (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
-                    "static.chartbeat.com/js/chartbeat.js");
-            document.body.appendChild(e);
-            _sf_async_config.sections = '';
-            _sf_async_config.authors = '';
-        }
+    <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-3574867-1']);
+        _gaq.push(['_setDomainName', 'themarker.com']);
+        _gaq.push(['_trackPageview']);
 
-        var oldonload = window.onload;
-        window.onload = (typeof window.onload != 'function') ?
-                loadChartbeat : function () {
-            oldonload();
-            loadChartbeat();
-        };
-    })();
-</script>
-<!-- Chartbeat Tag End -->
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- Analytics Tag End -->
+    <!-- Chartbeat Tag Start -->
+    <script>
+        var _sf_async_config = {uid: 5952, domain: "themarker.com"};
+        (function () {
+            function loadChartbeat() {
+                window._sf_endpt = (new Date()).getTime();
+                var e = document.createElement('script');
+                e.setAttribute('language', 'javascript');
+                e.setAttribute('type', 'text/javascript');
+                e.setAttribute('src', (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+                        "static.chartbeat.com/js/chartbeat.js");
+                document.body.appendChild(e);
+                _sf_async_config.sections = '';
+                _sf_async_config.authors = '';
+            }
+
+            var oldonload = window.onload;
+            window.onload = (typeof window.onload != 'function') ?
+                    loadChartbeat : function () {
+                oldonload();
+                loadChartbeat();
+            };
+        })();
+    </script>
+    <!-- Chartbeat Tag End -->
 </body>
 </html>

@@ -24,4 +24,4 @@ javascripts_dir = "js"
 #debug #sass_options = {:debug_info => true}
 #sourcemaps sass_options = {:sourcemap => true}
 
-sass_options = {:cache_location => "e:/tmp/sass-cache"}
+#sass_options = {:cache_location => "c:/tmp/sass-cache"}

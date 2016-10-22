@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="e43aba7e-f19c-4cb9-8195-a1a6699ca2c5" name="st.haaretz.co.il" url="http://www.haaretz.co.il/st/c/dev/">
-        <fileTransfer host="st.haaretz.co.il" port="21" rootFolder="/dev" password="dfcfdfc6dfc3df9bdf98df99" username="elijahum">
+      <webServer id="e43aba7e-f19c-4cb9-8195-a1a6699ca2c5" name="st.haaretz.co.il" url="">
+        <fileTransfer host="st.haaretz.co.il" port="21" rootFolder="/dev">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>

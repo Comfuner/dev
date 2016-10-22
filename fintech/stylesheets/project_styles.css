@@ -24,5 +24,262 @@
 Grid
 
 ------------------------------------------------------------------*/
+/* line 3, ../sass/project_styles.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 6, ../sass/project_styles.scss */
+#chapA {
+  padding: 0 24px !important;
+}
+
+/* line 9, ../sass/project_styles.scss */
+.featuresheadline {
+  margin-bottom: 24px;
+}
+/* line 10, ../sass/project_styles.scss */
+.featuresheadline h1 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* line 18, ../sass/project_styles.scss */
+.featureslist {
+  perspective: 200px;
+  margin: 0 -12px;
+  font-family: "Open Sans Hebrew", Arial;
+}
+/* line 23, ../sass/project_styles.scss */
+.featureslist .feature {
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  background: #474747;
+  padding: 12px;
+  color: #fff;
+  transform: translate3d(0, 0, -5px);
+  margin-bottom: 24px;
+}
+/* line 33, ../sass/project_styles.scss */
+.featureslist .feature h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+/* line 37, ../sass/project_styles.scss */
+.featureslist .feature p {
+  font-size: 18px;
+  line-height: 30px;
+}
+/* line 41, ../sass/project_styles.scss */
+.featureslist .feature:hover {
+  transform: translate3d(0, 0, 0);
+  filter: drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.4));
+}
+
+/* line 48, ../sass/project_styles.scss */
+.graphs {
+  margin-bottom: 24px;
+}
+/* line 50, ../sass/project_styles.scss */
+.graphs h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+/* line 54, ../sass/project_styles.scss */
+.graphs p {
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 24px;
+}
+/* line 59, ../sass/project_styles.scss */
+.graphs .open-graph {
+  margin-bottom: 24px;
+}
+
+/* line 65, ../sass/project_styles.scss */
+.companies {
+  perspective: 200px;
+  overflow: hidden;
+  margin: 0 -12px;
+}
+/* line 69, ../sass/project_styles.scss */
+.companies .company {
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  background: lightgray;
+  padding-bottom: 100%;
+  margin-bottom: 24px;
+  vertical-align: middle;
+  position: relative;
+}
+/* line 77, ../sass/project_styles.scss */
+.companies .company .company_container {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  display: block;
+}
+/* line 83, ../sass/project_styles.scss */
+.companies .company .company_container span {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 89, ../sass/project_styles.scss */
+.companies .company .company_container img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 96, ../sass/project_styles.scss */
+.companies .company:hover {
+  transform: translate3d(0, 0, -5px);
+}
+
+/* line 102, ../sass/project_styles.scss */
+html, body {
+  height: 100%;
+  background: #FFF;
+}
+
+/* line 106, ../sass/project_styles.scss */
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+/* line 116, ../sass/project_styles.scss */
+.fullscreen-bg__video {
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* line 125, ../sass/project_styles.scss */
+#vale {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+/* line 139, ../sass/project_styles.scss */
+#vale:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* line 143, ../sass/project_styles.scss */
+#vale #modal {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 24px;
+  border-radius: 2px;
+  background: #fff;
+}
+
+/* line 156, ../sass/project_styles.scss */
+#chevron {
+  animation-name: bounce;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transition: all 0.25s ease-in-out;
+  position: relative;
+  text-align: center;
+  /*padding: 6px;
+  margin-bottom: 6px;*/
+  height: 10px;
+  width: 200px;
+  display: inline-block;
+}
+
+/* line 171, ../sass/project_styles.scss */
+#chevron:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.68);
+  -webkit-transform: skew(0deg, 12deg);
+  -moz-transform: skew(0deg, 12deg);
+  -ms-transform: skew(0deg, 12deg);
+  -o-transform: skew(0deg, 12deg);
+  transform: skew(0deg, 12deg);
+}
+
+/* line 185, ../sass/project_styles.scss */
+#chevron:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.68);
+  -webkit-transform: skew(0deg, -12deg);
+  -moz-transform: skew(0deg, -12deg);
+  -ms-transform: skew(0deg, -12deg);
+  -o-transform: skew(0deg, -12deg);
+  transform: skew(0deg, -12deg);
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/*
+@include keyframes(bounce) {
+  0%, 20%, 50%, 80%, 100% {
+    @include transform(translateY(0));
+  }
+  40% {
+    @include transform(translateY(-30px));
+  }
+  60% {
+    @include transform(translateY(-15px));
+  }
+}
+*/
 
 /*# sourceMappingURL=project_styles.css.map */
