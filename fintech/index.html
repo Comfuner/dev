@@ -26,8 +26,8 @@
 <body>
 <div class="fullscreen-bg">
     <video loop muted autoplay class="fullscreen-bg__video">
-        <source src="vide/mp4.mp4" type="video/mp4">
-        <source src="vid/webm.webm" type="video/webm">
+        <source src="vid/testbg.mp4" type="video/mp4">
+        <!--<source src="vid/webm.webm" type="video/webm">-->
     </video>
 </div>
 <!-- Facebook init -->
@@ -490,8 +490,20 @@
 </div>
 <div id="vale" class="vale">
     <div id="modal">
-        <a href="#close"><div class="closeVale">x</div></a>
-        <h1>מודאל</h1>
+        <a id="closer" href="#close"><div class="closeVale">x</div></a>
+        <h1 id="companyname">שם החברה</h1>
+        <span class="companylabel">נוסדה: </span><span id="companyyear">8888</span><br>
+        <span id="companyslogan">סלוגן חברה</span><br>
+        <p id="companydetails">פרטי חברה</p>
+        <span class="companylabel">מספר עובדים: </span><span id="numberofemploy">8888</span><br>
+        <span class="companylabel">כתובת משרדים: </span><span id="companyoffice">משרדים</span><br><br>
+        <span class="companylabel">אתר: </span><a id="companywebsite" href="#" target="_blank">אתר החברה</a><br>
+        <span class="companylabel">תחום: </span><span id="companyfield">תחום</span><br>
+        <span class="companylabel">מייסדים: </span><span id="companyfounders">מייסדים</span><br>
+        <span class="companylabel">שלב המימון: </span><span id="fundstage">שלב המימון</span><br>
+        <span class="companylabel">השקעה עד עכשיו: </span><span id="investment">השקעה עד עכשיו</span><br>
+        <span class="companylabel">משקיעים: </span><span id="investors">משקיעים</span>
+
     </div>
 </div>
 
@@ -504,7 +516,7 @@
     <!--<script src="http://www.themarker.com/st/c/work/elijahu/engines/tests/bundle/2/mag_builder.js"></script>-->
     <script src="http://www.themarker.com/st/c/work/elijahu/engines/tests/bundle/2/bundle.js"></script>
     <!--<script src="js/main-mag.js"></script>-->
-    <script src="js/theme.js"></script>
+    <!--<script src="js/theme.js"></script>-->
     <script src="js/main.js"></script>
 
     <!-- Analytics Tag Start -->

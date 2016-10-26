@@ -3,6 +3,14 @@
 * {
   box-sizing: border-box;
 }
+.inter-mc {
+  color: #fff !important;
+  background: url(../img/cartographer.png) repeat;
+}
+.tm {
+  color: #fff !important;
+}
+
 #chapA {
   padding:0 24px !important;
 }
@@ -140,14 +148,6 @@ html, body {
     opacity:1;
     pointer-events: auto;
   }
-  #modal {
-    width: 400px;
-    position: relative;
-    margin: 10% auto;
-    padding: 24px;
-    border-radius: 2px;
-    background: #fff;
-  }
 }
 
 
@@ -206,7 +206,9 @@ html, body {
   80%  {transform:translateY(0)}
   100% {transform:translateY(0)}
 }
-
+.graph {
+  direction: ltr;
+}
 /*
 @include keyframes(bounce) {
   0%, 20%, 50%, 80%, 100% {
@@ -220,3 +222,39 @@ html, body {
   }
 }
 */
+
+.Ylabels {
+  direction: rtl;
+  font-size:20px;
+}
+
+#modal {
+  font-family:"open sans hebrew";
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 2px;
+  background: #fff;
+  #closer {
+    position: absolute;
+    right:6px;
+    top:6px;
+    font-family:htzIcons;
+    color: #60c700;
+    text-decoration: none;
+    font-size:18px;
+    padding:3px;
+    &:hover {
+      color: #2c2c2c;
+    }
+  }
+  h1 {
+    font-size: 30px;
+    margin-bottom:12px;
+  }
+  .companylabel {
+    font-weight:700 ;
+  }
+}
+

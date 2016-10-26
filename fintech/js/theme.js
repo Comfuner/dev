@@ -2,6 +2,7 @@ Highcharts.theme = {
     colors: ['#2b908f', '#90ee7e', '#f45b5b', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
         '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'],
     chart: {
+        useHTML: true,
         backgroundColor: {
             linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
             stops: [
@@ -10,7 +11,7 @@ Highcharts.theme = {
             ]
         },
         style: {
-            fontFamily: '\'Unica One\', sans-serif'
+            fontFamily: 'Open Sans Hebrew'
         },
         plotBorderColor: '#606063'
     },
@@ -45,6 +46,9 @@ Highcharts.theme = {
         }
     },
     yAxis: {
+        align: 'center',
+        gridLineWidth: 0,
+        minorGridLineWidth: 1,
         gridLineColor: '#707073',
         labels: {
             style: {
@@ -54,7 +58,7 @@ Highcharts.theme = {
         lineColor: '#707073',
         minorGridLineColor: '#505053',
         tickColor: '#707073',
-        tickWidth: 1,
+        tickWidth: 0,
         title: {
             style: {
                 color: '#A0A0A3'
@@ -64,14 +68,12 @@ Highcharts.theme = {
     tooltip: {
         backgroundColor: 'rgba(0, 0, 0, 0.85)',
         style: {
-            color: '#F0F0F0'
+            color: 'transparent'
         }
     },
     plotOptions: {
         series: {
-            dataLabels: {
-                color: '#B0B0B3'
-            },
+
             marker: {
                 lineColor: '#333'
             }
