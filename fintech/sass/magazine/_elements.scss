@@ -220,7 +220,7 @@ and (max-device-height : 568px) {
   @include prefix((background-repeat: no-repeat), ms o moz);
   @include prefix((background-attachment: fixed), ms o moz);
   @include prefix((background-position: center center), ms o moz);
-  @include prefix((background-size: cover), webkit ms o moz);
+  //@include prefix((background-size: cover), webkit ms o moz);
   @include prefix((transform: none), webkit ms o moz);
   //@include prefix((transform: translate), webkit ms o moz);
 

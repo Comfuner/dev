@@ -4,38 +4,66 @@
   box-sizing: border-box;
 }
 .inter-mc {
-  color: #fff !important;
-  background: url(../img/cartographer.png) repeat;
+  color: #222 !important;
+  //background:#fff;
+}
+.inter-row {
+  background: #fff;
+  margin-bottom:0 !important;
+}
+.inter-row .full {
+  h1 {
+
+  }
+}
+.inter-row .flush {
+  margin: 0 auto 0 auto !important;
 }
 .tm {
-  color: #fff !important;
+  //color: #222 !important;
+  padding-top:48px;
+  padding-bottom:24px;
 }
+.mo {
 
+}
+.op {
+  background-repeat: no-repeat;
+  margin-bottom:0 !important;
+}
+.chapter {
+}
 #chapA {
+  //background: #fff;
+  //@include angle('both',true,3deg);
   padding:0 24px !important;
+  padding-top:24px;
+  margin-top:150px;
 }
 .featuresheadline {
   h1 {
     font-size: 3rem;
     text-align: center;
     font-weight: 700;
+    padding: 24px !important;
+    margin-top:150px;
   }
   margin-bottom: 24px;
 }
 
 .featureslist {
-  perspective: 200px;
+  //perspective: 200px;
   //padding: 0 24px !important;
   margin:0 -12px;
   font-family: "Open Sans Hebrew", Arial;
   .feature {
-    transition: all 0.25s ease-in-out;
+    //transition: all 0.25s ease-in-out;
     //filter: drop-shadow(0px -1px 1px rgba(0,0,0,0.25));
     cursor:pointer;
     background: rgba(71, 71, 71, 1);
     padding: 12px;
     color: #fff;
-    transform: translate3d(0,0,-5px);
+    //transform: translate3d(0,0,-5px);
     //transform: rotate3d(1, 0, 0, 1deg);
     margin-bottom: 24px;
     h2 {
@@ -47,14 +75,49 @@
       line-height: 30px;
     }
     &:hover {
-      transform: translate3d(0,0,0);
-      filter: drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.4));
+      //transform: translate3d(0,0,0);
+      //filter: drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.4));
     }
   }
 }
-
+.arrow_box_up {
+  position: relative;
+  background: #fff;
+}
+.arrow_box_up:after {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #fff;
+  border-width: 30px;
+  margin-left: -30px;
+}
+.arrow_box_down {
+  position: relative;
+  background: #6b6b6b;
+}
+.arrow_box_down:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: #6b6b6b;
+  border-width: 30px;
+  margin-left: -30px;
+}
 .graphs {
-  //padding: 0 24px !important;
+  padding: 0 0 24px 0 !important;
   h2 {
     font-size: 1.5rem;
     margin-bottom: 12px;
@@ -65,13 +128,15 @@
     margin-bottom:24px;
   }
   .open-graph {
+    color:#fff;
+    margin-top:24px;
     margin-bottom: 24px;
+    background: #6b6b6b;
   }
-  margin-bottom: 24px;
 }
 
 .companies {
-  perspective: 200px;
+  //perspective: 200px;
   overflow: hidden;
   margin: 0 -12px;
   .company {
@@ -109,25 +174,23 @@
 
 html, body {
   height:100%;
-  background:#FFF;
+  //background:#FFF;
 }
-.fullscreen-bg {
+video#bgvid {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
   z-index: -100;
-}
-
-.fullscreen-bg__video {
-  opacity:0.5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  //height: 100%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: #fff;
+  background-size: cover;
 }
 
 #vale {

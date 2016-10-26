@@ -2844,7 +2844,7 @@ button::-moz-focus-inner {
 }
 /* line 28, ../sass/magazine/_foundation.scss */
 .inter-row.full {
-  padding: 0 !important;
+  padding: 0 24px !important;
 }
 /* line 31, ../sass/magazine/_foundation.scss */
 .inter-row.distinct {
@@ -2929,7 +2929,7 @@ button::-moz-focus-inner {
 }
 /* line 28, ../sass/magazine/_foundation.scss */
 .inter-row.full {
-  padding: 0 !important;
+  padding: 0 24px !important;
 }
 /* line 31, ../sass/magazine/_foundation.scss */
 .inter-row.distinct {
@@ -3257,11 +3257,6 @@ button::-moz-focus-inner {
   -o-background-position: center center;
   -moz-background-position: center center;
   background-position: center center;
-  -webkit-background-size: cover;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
   -webkit-transform: none;
   -ms-transform: none;
   -o-transform: none;

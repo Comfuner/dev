@@ -13,10 +13,11 @@
     <meta property="og:image" content="">
     <meta property="og:description" content=""/>
 
-
+    <script src="aos/aos.js"></script>
     <!-- build:remove -->
     <link rel="stylesheet" type="text/css" href="stylesheets/styles_tm.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/project_styles.css">
+    <link rel="stylesheet" type="text/css" href="aos/aos.css">
     <!-- /build -->
 
     <!-- build:template
@@ -25,9 +26,9 @@
 </head>
 <body>
 <div class="fullscreen-bg">
-    <video loop muted autoplay class="fullscreen-bg__video">
-        <source src="vid/testbg.mp4" type="video/mp4">
-        <!--<source src="vid/webm.webm" type="video/webm">-->
+    <video loop muted autoplay id="bgvid" class="fullscreen-bg__video">
+        <source src="vid/mp4.mp4" type="video/mp4">
+        <source src="vid/webm.webm" type="video/webm">
     </video>
 </div>
 <!-- Facebook init -->
@@ -75,9 +76,9 @@
 <!-- Main Element Start -->
 <div class="inter-mc w-check">
     <div id="chap0" class="chapter">
-        <div class="inter-row flush">
-            <div id="item5" class="op"
-                 style="background-image:url(https://unsplash.it/1920/1080?image=1031)">
+        <div class="inter-row flush" style="margin:0 auto !important">
+            <div id="item5" class="op" style="background-size:cover;background-color:#424242;background-image:url(img/redplex.jpg)">
+                 <!--style="background-image:url(https://unsplash.it/1920/1080?image=1031)">-->
                 <div class="opAbsCont">
                     <div class="opCont">
                         <div class="opHead" style="color:#fff">רעידת האדמה של הפינטק</div>
@@ -87,11 +88,9 @@
                         </a></div>
                 </div>
             </div>
-            <div class="open-inter-caption"><span></span><span>צילום: </span></div>
         </div>
         </div>
     <div id="chapA" class="chapter">
-
         <div class="inter-row regular">
             <p id="mo" class="tm cntr">
                 לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית להאמית קרהשק סכעיט דז מא, מנכם למטכין נשואי
@@ -111,15 +110,17 @@
                 <button class="inter-m">m</button>
             </div>
         </div>
+    </div>
+    <div id="chapB" class="chapter">
         <div class="inter-row regular"><p class="txt cntr">הצוואר שוב תפוס? תרגילי השחרור כבר לא עוזרים? זה הזמן לטבול
             במעיין או באמבט מים חמים או קרים ולצאת לחופשת ספא. בין אם היא נמשכת יום אחד בלבד או שלושה שבועות, חופשה
             שכזו, היא לפעמים הכרחית, ועכשיו, באוגוסט הישראלי, היא אולי הכרחית יותר מתמיד.
         </p>
 
         </div>
-        <div class="inter-row full">
+        <div class="inter-row regular">
             <div class="gg graphs">
-                <div class="x12of12 l12of12 m12of12 s12of12 t12of12 open-graph">
+                <div class="x12of12 l12of12 m12of12 s12of12 t12of12 open-graph arrow_box_down" style="padding:24px !important">
                     <h2>כותרת הגרף</h2>
                     <p>
                         צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. נולום ארווס סאפיאן - פוסיליס
@@ -129,8 +130,12 @@
                         בעריר גק ליץ, ושבעגט ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו סתשם
                         השמה - לתכי מורגם בורק? לתיג ישבעס.
                     </p>
-                    <div id="graph1" class="graph"></div>
                 </div>
+            </div>
+        </div>
+        <div class="inter-row full">
+            <div id="graph1" class="graph"></div>
+            <div class="gg graphs">
                 <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
                     <h2>כותרת הגרף</h2>
                     <p>
@@ -157,14 +162,14 @@
                 </div>
             </div>
         </div> <!-- end of chap 0 -->
-        <div class="inter-row-full featuresheadline">
+        <div class="inter-row full featuresheadline">
             <h1>כותרת פיצ'רים</h1>
         </div>
         <div class="chapter" id="chap1">
             <div class="inter-row full featureslist">
                 <div class="gg">
                     <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
-                        <div class="feature">
+                        <div  data-aos="flip-down" data-aos-delay="100" class="feature">
                             <h2>כותרת פיצ'ר</h2>
                             <img class="inter-img-w"
                                  src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
@@ -182,7 +187,7 @@
                         </div>
                     </div>
                     <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
-                        <div class="feature">
+                        <div data-aos="flip-down" class="feature">
                             <h2>כותרת פיצ'ר</h2>
                             <img class="inter-img-w"
                                  src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
@@ -200,7 +205,7 @@
                         </div>
                     </div>
                     <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
-                        <div class="feature">
+                        <div  data-aos="flip-down" data-aos-delay="100" class="feature">
                             <h2>כותרת פיצ'ר</h2>
                             <img class="inter-img-w"
                                  src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
@@ -218,7 +223,7 @@
                         </div>
                     </div>
                     <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
-                        <div class="feature">
+                        <div data-aos="flip-down" class="feature">
                             <h2>כותרת פיצ'ר</h2>
                             <img class="inter-img-w"
                                  src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
@@ -236,7 +241,7 @@
                         </div>
                     </div>
                     <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
-                        <div class="feature">
+                        <div  data-aos="flip-down" data-aos-delay="100" class="feature">
                             <h2>כותרת פיצ'ר</h2>
                             <img class="inter-img-w"
                                  src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
@@ -254,7 +259,7 @@
                         </div>
                     </div>
                     <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
-                        <div class="feature">
+                        <div data-aos="flip-down" class="feature">
                             <h2>כותרת פיצ'ר</h2>
                             <img class="inter-img-w"
                                  src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
@@ -272,7 +277,7 @@
                         </div>
                     </div>
                     <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
-                        <div class="feature">
+                        <div  data-aos="flip-down" data-aos-delay="100" class="feature">
                             <h2>כותרת פיצ'ר</h2>
                             <img class="inter-img-w"
                                  src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
@@ -290,7 +295,7 @@
                         </div>
                     </div>
                     <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
-                        <div class="feature">
+                        <div data-aos="flip-down" class="feature">
                             <h2>כותרת פיצ'ר</h2>
                             <img class="inter-img-w"
                                  src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
@@ -308,7 +313,7 @@
                         </div>
                     </div>
                     <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
-                        <div class="feature">
+                        <div  data-aos="flip-down" data-aos-delay="100" class="feature">
                             <h2>כותרת פיצ'ר</h2>
                             <img class="inter-img-w"
                                  src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
@@ -326,7 +331,7 @@
                         </div>
                     </div>
                     <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
-                        <div class="feature">
+                        <div data-aos="flip-down" class="feature">
                             <h2>כותרת פיצ'ר</h2>
                             <img class="inter-img-w"
                                  src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
@@ -344,7 +349,7 @@
                         </div>
                     </div>
                     <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
-                        <div class="feature">
+                        <div  data-aos="flip-down" data-aos-delay="100" class="feature">
                             <h2>כותרת פיצ'ר</h2>
                             <img class="inter-img-w"
                                  src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
@@ -362,7 +367,7 @@
                         </div>
                     </div>
                     <div class="x6of12 l6of12 m6of12 s12of12 t12of12">
-                        <div class="feature">
+                        <div data-aos="flip-down" class="feature">
                             <h2>כותרת פיצ'ר</h2>
                             <img class="inter-img-w"
                                  src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif"/>
@@ -382,7 +387,7 @@
                 </div>
             </div>
         </div>
-        <div class="inter-row-full featuresheadline">
+        <div class="inter-row full featuresheadline">
             <h1>כותרת חברות פינטק</h1>
         </div>
         <div class="chapter" id="chap2">
@@ -390,7 +395,7 @@
                 <div class="companies">
                     <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
                         <a href="#vale">
-                        <div class="company">
+                        <div data-aos="zoom-in" data-aos-delay="0" class="company">
                             <div class="company_container">
                                 <img class="inter-img-w"
                                      src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif">
@@ -399,14 +404,14 @@
                         </a>
                     </div>
                     <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
-                        <div class="company">
+                        <div data-aos="zoom-in" data-aos-delay="100" class="company">
                             <div class="company_container">
                                 <span>שם חברה</span>
                             </div>
                         </div>
                     </div>
                     <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
-                        <div class="company">
+                        <div data-aos="zoom-in" data-aos-delay="200" class="company">
                             <div class="company_container">
                                 <img class="inter-img-w"
                                      src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif">
@@ -414,7 +419,7 @@
                         </div>
                     </div>
                     <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
-                        <div class="company">
+                        <div data-aos="zoom-in" data-aos-delay="300" class="company">
                             <div class="company_container">
                                 <img class="inter-img-w"
                                      src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif">
@@ -422,7 +427,7 @@
                         </div>
                     </div>
                     <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
-                        <div class="company">
+                        <div data-aos="zoom-in" data-aos-delay="400" class="company">
                             <div class="company_container">
                                 <img class="inter-img-w"
                                      src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif">
@@ -430,14 +435,14 @@
                         </div>
                     </div>
                     <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
-                        <div class="company">
+                        <div data-aos="zoom-in" data-aos-delay="100" class="company">
                             <div class="company_container">
                                 <span>שם חברה</span>
                             </div>
                         </div>
                     </div>
                     <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
-                        <div class="company">
+                        <div data-aos="zoom-in" data-aos-delay="200" class="company">
                             <div class="company_container">
                                 <img class="inter-img-w"
                                      src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif">
@@ -445,7 +450,7 @@
                         </div>
                     </div>
                     <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
-                        <div class="company">
+                        <div data-aos="zoom-in" data-aos-delay="300" class="company">
                             <div class="company_container">
                                 <img class="inter-img-w"
                                      src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif">
@@ -453,7 +458,7 @@
                         </div>
                     </div>
                     <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
-                        <div class="company">
+                        <div data-aos="zoom-in" data-aos-delay="400" class="company">
                             <div class="company_container">
                                 <img class="inter-img-w"
                                      src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif">
@@ -461,14 +466,14 @@
                         </div>
                     </div>
                     <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
-                        <div class="company">
+                        <div data-aos="zoom-in" data-aos-delay="100" class="company">
                             <div class="company_container">
                                 <span>שם חברה</span>
                             </div>
                         </div>
                     </div>
                     <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
-                        <div class="company">
+                        <div data-aos="zoom-in" data-aos-delay="200" class="company">
                             <div class="company_container">
                                 <img class="inter-img-w"
                                      src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif">
@@ -476,7 +481,7 @@
                         </div>
                     </div>
                     <div class="x3of12 l3of12 m6of12 s6of12 t6of12">
-                        <div class="company">
+                        <div data-aos="zoom-in" data-aos-delay="300" class="company">
                             <div class="company_container">
                                 <img class="inter-img-w"
                                      src="http://www.themarker.com/st/c/static/resources/img/thumb_marker.gif">
@@ -517,6 +522,13 @@
     <script src="http://www.themarker.com/st/c/work/elijahu/engines/tests/bundle/2/bundle.js"></script>
     <!--<script src="js/main-mag.js"></script>-->
     <!--<script src="js/theme.js"></script>-->
+<script src="aos/aos.js"></script>
+<script>
+    AOS.init({
+        easing: 'ease-out-back',
+        duration: 1000
+    });
+</script>
     <script src="js/main.js"></script>
 
     <!-- Analytics Tag Start -->

@@ -31,90 +31,149 @@ Grid
 
 /* line 6, ../sass/project_styles.scss */
 .inter-mc {
-  color: #fff !important;
-  background: url(../img/cartographer.png) repeat;
+  color: #222 !important;
 }
 
 /* line 10, ../sass/project_styles.scss */
-.tm {
-  color: #fff !important;
+.inter-row {
+  background: #fff;
+  margin-bottom: 0 !important;
 }
 
-/* line 14, ../sass/project_styles.scss */
+/* line 19, ../sass/project_styles.scss */
+.inter-row .flush {
+  margin: 0 auto 0 auto !important;
+}
+
+/* line 22, ../sass/project_styles.scss */
+.tm {
+  padding-top: 48px;
+  padding-bottom: 24px;
+}
+
+/* line 30, ../sass/project_styles.scss */
+.op {
+  background-repeat: no-repeat;
+  margin-bottom: 0 !important;
+}
+
+/* line 36, ../sass/project_styles.scss */
 #chapA {
   padding: 0 24px !important;
+  padding-top: 24px;
+  margin-top: 150px;
 }
 
-/* line 17, ../sass/project_styles.scss */
+/* line 43, ../sass/project_styles.scss */
 .featuresheadline {
   margin-bottom: 24px;
 }
-/* line 18, ../sass/project_styles.scss */
+/* line 44, ../sass/project_styles.scss */
 .featuresheadline h1 {
   font-size: 3rem;
   text-align: center;
   font-weight: 700;
+  padding: 24px !important;
+  margin-top: 150px;
 }
 
-/* line 26, ../sass/project_styles.scss */
+/* line 54, ../sass/project_styles.scss */
 .featureslist {
-  perspective: 200px;
   margin: 0 -12px;
   font-family: "Open Sans Hebrew", Arial;
 }
-/* line 31, ../sass/project_styles.scss */
+/* line 59, ../sass/project_styles.scss */
 .featureslist .feature {
-  transition: all 0.25s ease-in-out;
   cursor: pointer;
   background: #474747;
   padding: 12px;
   color: #fff;
-  transform: translate3d(0, 0, -5px);
   margin-bottom: 24px;
 }
-/* line 41, ../sass/project_styles.scss */
+/* line 69, ../sass/project_styles.scss */
 .featureslist .feature h2 {
   font-size: 1.5rem;
   margin-bottom: 12px;
 }
-/* line 45, ../sass/project_styles.scss */
+/* line 73, ../sass/project_styles.scss */
 .featureslist .feature p {
   font-size: 18px;
   line-height: 30px;
 }
-/* line 49, ../sass/project_styles.scss */
-.featureslist .feature:hover {
-  transform: translate3d(0, 0, 0);
-  filter: drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.4));
+
+/* line 83, ../sass/project_styles.scss */
+.arrow_box_up {
+  position: relative;
+  background: #fff;
 }
 
-/* line 56, ../sass/project_styles.scss */
-.graphs {
-  margin-bottom: 24px;
+/* line 87, ../sass/project_styles.scss */
+.arrow_box_up:after {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #fff;
+  border-width: 30px;
+  margin-left: -30px;
 }
-/* line 58, ../sass/project_styles.scss */
+
+/* line 101, ../sass/project_styles.scss */
+.arrow_box_down {
+  position: relative;
+  background: #6b6b6b;
+}
+
+/* line 105, ../sass/project_styles.scss */
+.arrow_box_down:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: #6b6b6b;
+  border-width: 30px;
+  margin-left: -30px;
+}
+
+/* line 119, ../sass/project_styles.scss */
+.graphs {
+  padding: 0 0 24px 0 !important;
+}
+/* line 121, ../sass/project_styles.scss */
 .graphs h2 {
   font-size: 1.5rem;
   margin-bottom: 12px;
 }
-/* line 62, ../sass/project_styles.scss */
+/* line 125, ../sass/project_styles.scss */
 .graphs p {
   font-size: 18px;
   line-height: 30px;
   margin-bottom: 24px;
 }
-/* line 67, ../sass/project_styles.scss */
+/* line 130, ../sass/project_styles.scss */
 .graphs .open-graph {
+  color: #fff;
+  margin-top: 24px;
   margin-bottom: 24px;
+  background: #6b6b6b;
 }
 
-/* line 73, ../sass/project_styles.scss */
+/* line 138, ../sass/project_styles.scss */
 .companies {
-  perspective: 200px;
   overflow: hidden;
   margin: 0 -12px;
 }
-/* line 77, ../sass/project_styles.scss */
+/* line 142, ../sass/project_styles.scss */
 .companies .company {
   cursor: pointer;
   transition: all 0.25s ease-in-out;
@@ -124,14 +183,14 @@ Grid
   vertical-align: middle;
   position: relative;
 }
-/* line 85, ../sass/project_styles.scss */
+/* line 150, ../sass/project_styles.scss */
 .companies .company .company_container {
   width: 100%;
   position: absolute;
   height: 100%;
   display: block;
 }
-/* line 91, ../sass/project_styles.scss */
+/* line 156, ../sass/project_styles.scss */
 .companies .company .company_container span {
   display: inline-block;
   position: absolute;
@@ -139,7 +198,7 @@ Grid
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* line 97, ../sass/project_styles.scss */
+/* line 162, ../sass/project_styles.scss */
 .companies .company .company_container img {
   display: block;
   position: absolute;
@@ -147,38 +206,35 @@ Grid
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* line 104, ../sass/project_styles.scss */
+/* line 169, ../sass/project_styles.scss */
 .companies .company:hover {
   transform: translate3d(0, 0, -5px);
 }
 
-/* line 110, ../sass/project_styles.scss */
+/* line 175, ../sass/project_styles.scss */
 html, body {
   height: 100%;
-  background: #FFF;
 }
 
-/* line 114, ../sass/project_styles.scss */
-.fullscreen-bg {
+/* line 179, ../sass/project_styles.scss */
+video#bgvid {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
   z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: #fff;
+  background-size: cover;
 }
 
-/* line 124, ../sass/project_styles.scss */
-.fullscreen-bg__video {
-  opacity: 0.5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-/* line 133, ../sass/project_styles.scss */
+/* line 196, ../sass/project_styles.scss */
 #vale {
   position: fixed;
   font-family: Arial, Helvetica, sans-serif;
@@ -194,13 +250,13 @@ html, body {
   transition: opacity 400ms ease-in;
   pointer-events: none;
 }
-/* line 147, ../sass/project_styles.scss */
+/* line 210, ../sass/project_styles.scss */
 #vale:target {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* line 156, ../sass/project_styles.scss */
+/* line 219, ../sass/project_styles.scss */
 #chevron {
   animation-name: bounce;
   animation-duration: 3s;
@@ -215,7 +271,7 @@ html, body {
   display: inline-block;
 }
 
-/* line 171, ../sass/project_styles.scss */
+/* line 234, ../sass/project_styles.scss */
 #chevron:before {
   content: '';
   position: absolute;
@@ -231,7 +287,7 @@ html, body {
   transform: skew(0deg, 12deg);
 }
 
-/* line 185, ../sass/project_styles.scss */
+/* line 248, ../sass/project_styles.scss */
 #chevron:after {
   content: '';
   position: absolute;
@@ -270,7 +326,7 @@ html, body {
     transform: translateY(0);
   }
 }
-/* line 209, ../sass/project_styles.scss */
+/* line 272, ../sass/project_styles.scss */
 .graph {
   direction: ltr;
 }
@@ -288,13 +344,13 @@ html, body {
   }
 }
 */
-/* line 226, ../sass/project_styles.scss */
+/* line 289, ../sass/project_styles.scss */
 .Ylabels {
   direction: rtl;
   font-size: 20px;
 }
 
-/* line 231, ../sass/project_styles.scss */
+/* line 294, ../sass/project_styles.scss */
 #modal {
   font-family: "open sans hebrew";
   width: 400px;
@@ -304,7 +360,7 @@ html, body {
   border-radius: 2px;
   background: #fff;
 }
-/* line 239, ../sass/project_styles.scss */
+/* line 302, ../sass/project_styles.scss */
 #modal #closer {
   position: absolute;
   right: 6px;
@@ -315,16 +371,16 @@ html, body {
   font-size: 18px;
   padding: 3px;
 }
-/* line 248, ../sass/project_styles.scss */
+/* line 311, ../sass/project_styles.scss */
 #modal #closer:hover {
   color: #2c2c2c;
 }
-/* line 252, ../sass/project_styles.scss */
+/* line 315, ../sass/project_styles.scss */
 #modal h1 {
   font-size: 30px;
   margin-bottom: 12px;
 }
-/* line 256, ../sass/project_styles.scss */
+/* line 319, ../sass/project_styles.scss */
 #modal .companylabel {
   font-weight: 700;
 }

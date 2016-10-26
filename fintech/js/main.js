@@ -12,7 +12,7 @@ var inter = new Engine(defaults, settings, switches);
 /*--------------------------------------------------------------*/
 
 $(document).ready(function () {
-
+    AOS.init();
     inter.defFunc.register.clickEvents();
     inter.func.check.width($('.inter-mc').width());
     inter.defFunc.register.shareEvents();
@@ -65,7 +65,7 @@ $(document).ready(function () {
                     ],
                     labels: {
                         style: {
-                            color: "#fff",
+                            color: "#222",
                             fontFamily: 'Open Sans Hebrew'
                         }
                     },
@@ -98,7 +98,7 @@ $(document).ready(function () {
                             className: 'Ylabels',
                             useHTML: true,
                             align: 'center',
-                            color: '#fff',
+                            color: '#222',
                             enabled: true,
                             format: '{y}%',
                             style: {
@@ -113,6 +113,7 @@ $(document).ready(function () {
                     }
                 },
                 series: [{
+                    color: 'red',
                     name: 'סבירות',
                     data: [80, 60, 38, 32, 30, 26, 22]
 
@@ -143,7 +144,7 @@ $(document).ready(function () {
                     ],
                     labels: {
                         style: {
-                            color: "#fff",
+                            color: "#222",
                             fontFamily: 'Open Sans Hebrew'
                         }
                     },
@@ -176,7 +177,7 @@ $(document).ready(function () {
                         dataLabels: {
                             useHTML: true,
                             align: 'right',
-                            color: '#fff',
+                            color: '#222',
                             enabled: true,
                             format: '{y} B₪',
                             style: {
@@ -189,6 +190,7 @@ $(document).ready(function () {
                     line: {}
                 },
                 series: [{
+                    color: 'red',
                     name: 'השקעות',
                     data: [17.8, 38, 38]
 
@@ -229,7 +231,7 @@ $(document).ready(function () {
                             padding: '0px 12px',
                             textAlign: 'right',
                             direction: 'rtl',
-                            color: "#fff",
+                            color: "#222",
                             fontFamily: 'Open Sans Hebrew'
                         }
                     },
@@ -263,7 +265,7 @@ $(document).ready(function () {
                             className: 'Ylabels',
                             useHTML: true,
                             align: 'left',
-                            color: '#fff',
+                            color: '#222',
                             enabled: true,
                             format: '{y}%',
                             style: {
@@ -277,6 +279,7 @@ $(document).ready(function () {
                     }
                 },
                 series: [{
+                    color: 'red',
                     name: 'סבירות',
                     data: [32, 25, 22, 15, 14, 14, 11, 9, 9, 7]
                 }]
